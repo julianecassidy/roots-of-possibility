@@ -1,0 +1,80 @@
+---
+import { LOGO_IMAGE, SITE } from "@config";
+---
+
+<div class="nav-bar">
+  <div class="nav-logo">
+    <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
+      {
+        LOGO_IMAGE.enable ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="380"
+            height="150"
+            viewBox="-50 -10 300 110"
+          >
+            <text
+              id="_logo_"
+              data-name="roots of possibility"
+              class="font-display fill-primary text-[200px]"
+              transform="translate(-3.684 55.747) scale(0.246 0.247)"
+            >
+              {"Roots of Possibility"}
+            </text>
+          </svg>
+        ) : (
+          SITE.title
+        )
+      }
+    </a>
+  </div>
+  <!-- nav bar will go here -->
+</div>
+
+<style>
+  .nav-bar {
+    @apply flex w-full mt-4;
+  }
+  .nav-logo {
+    @apply w-1/3 sm:w-2/12 ml-4;
+  }
+  #nav-menu {
+    @apply grow justify-end flex gap-8 mr-4 text-2xl;
+  }
+  nav a {
+    @apply font-sans text-3xl text-base-100 relative
+    before:content-[''] before:absolute before:block before:w-full before:h-[2px]
+    before:bottom-0 before:left-0 before:bg-primary
+    before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+    before:transition before:ease-in-out before:duration-300;;
+  }
+  nav a.active {
+    @apply underline decoration-primary decoration-2 underline-offset-[12px];
+  }
+
+</style>
+
+<script>
+  function toggleNav() {
+    // Toggle menu
+    const menuBtn = document.querySelector(".hamburger-menu");
+    const menuIcon = document.querySelector(".menu-icon");
+    const menuItems = document.querySelector("#mobile-menu-items");
+
+    menuBtn?.addEventListener("click", () => {
+      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuIcon?.classList.toggle("is-active");
+      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
+      menuBtn.setAttribute(
+        "aria-label",
+        menuExpanded ? "Open Menu" : "Close Menu",
+      );
+      menuItems?.classList.toggle("display-none");
+    });
+  }
+
+  toggleNav();
+
+  // Runs on view transitions navigation
+  document.addEventListener("astro:after-swap", toggleNav);
+</script>
