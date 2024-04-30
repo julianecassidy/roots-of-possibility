@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Julia Kuttler, MSW, LCSW",
   desc: "Collaborative, client-centerd therapy for children adolescents, and their families.",
   title: "Poots of Possibilty | Julia Kuttler",
-  ogImage: "https://julianecassidy.com/headshot.jpg",
+  ogImage: "https://rootsofpossibility.com/headshot.png",
   lightAndDarkMode: false,
 };
 
