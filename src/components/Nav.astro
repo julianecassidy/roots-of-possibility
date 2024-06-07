@@ -7,21 +7,7 @@ import { LOGO_IMAGE, SITE } from "@config";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="300"
-            height="150"
-            viewBox="-30 -10 350 110"
-          >
-            <text
-              id="_logo_"
-              data-name="roots of possibility"
-              class="font-display fill-primary text-[200px]"
-              transform="translate(-3.684 55.747) scale(0.246 0.247)"
-            >
-              {"Roots of Possibility"}
-            </text>
-          </svg>
+          <img src="./logo.png" alt="roots of possiblity logo" class="ml-16 w-24" />
         ) : (
           SITE.title
         )
