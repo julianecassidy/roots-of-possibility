@@ -14,7 +14,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["serenity", "Arial", "sans-serif"],
-        serif: ["bellefaire", "Georgia", "serif"],
+        serif: ["bellefair", "Georgia", "sans-serif"],
         display: ["lindsey-signature", "cursive"],
         body: ["serenity", "Arial", "sans-serif"],
         mono: ["IBM Plex Mono", "monospace"],

@@ -39,6 +39,10 @@
     @apply text-primary hover:text-secondary;
   }
 
+  button {
+    @apply text-base text-2xl;
+  }
+
   ul {
     @apply list-image-leaf;
   }

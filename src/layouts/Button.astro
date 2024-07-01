@@ -1,0 +1,23 @@
+---
+interface Props {
+	color: "primary" | "secondary";
+}
+
+const { color } = Astro.props;
+let style = '';
+
+switch (color) {
+    case 'primary':
+        style = "bg-primary text-base-100 hover:bg-secondary";
+        break;
+    case 'secondary':
+        style = "bg-base-100 text-neutral hover:bg-accent";
+        break;
+}
+
+console.log(style);
+---
+
+<button class=`${style} border rounded-3xl px-6 py-1 transition duration-200 ease-in-out`>
+    <slot />
+</button>
