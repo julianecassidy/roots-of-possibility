@@ -7,8 +7,8 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-base-100 font-body text-base text-neutral
-    mb-4 relative selection:bg-accent selection:bg-opacity-70;
+    @apply flex min-h-[100svh] flex-col bg-base-100 font-body font-light text-base
+    text-neutral mb-4 relative selection:bg-accent selection:bg-opacity-70;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -37,6 +37,10 @@
 
   a {
     @apply text-primary hover:text-secondary;
+  }
+
+  ul {
+    @apply list-image-leaf;
   }
 
   li {

@@ -13,12 +13,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Quicksand", "Arial", "sans-serif"],
-        serif: ["Lancelot", "Georgia", "serif"],
-        display: ["Fuggles", "cursive"],
-        body: ["Lancelot", "Arial", "sans-seri"],
+        sans: ["serenity", "Arial", "sans-serif"],
+        serif: ["bellefaire", "Georgia", "serif"],
+        display: ["lindsey-signature", "cursive"],
+        body: ["serenity", "Arial", "sans-serif"],
         mono: ["IBM Plex Mono", "monospace"],
       },
+      listStyleImage: {
+        leaf: "url('leaf-light.svg')",
+      }
     },
   },
   plugins: [require('@tailwindcss/typography'), require("daisyui")],
