@@ -27,9 +27,14 @@ export type Post = {
   date: string;
   canonical: string;
   tags: Array<Tag>
-}
+};
 
 export type Tag = {
   id: number;
   name: string;
-}
+};
+
+export type tTitleStyles = {
+  text: string;
+  style: "serif" | "display";
+};

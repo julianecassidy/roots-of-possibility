@@ -1,14 +1,25 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
 import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
 import Button from "@layouts/Button.astro";
+import type { tTitleStyles } from 'types';
 
-const pageTitle = "Roots of Possibility";
+const pageTitle: tTitleStyles[] = [
+	{text: "Therapy for",
+	style: "serif"},
+	{text: "Children",
+	style: "display"},
+	];
 ---
 
 <Layout title="Roots of Possibility | Julia Kuttler, LCSW">
 	<Main>
+		<Header
+			pageTitleWords={pageTitle}
+			pageDesc="Lorem ipsum dolor sit amet consectetur. Ultrices dolor feugiat sed sed ullamcorper vel egestas et. Volutpat amet in fermentum hac."
+		/>
 		<GreenWavyBlock>
 			<h2>Animal Assisted Therapy in Denver</h2>
 			<p>Lorem ipsum dolor sit amet consectetur. Neque maecenas venenatis donec id non vel dignissim amet nec. Amet ut gravida nunc malesuada. Dolor magnis et id a ultrices eleifend aliquam purus rutrum. Quis consequat aliquet eu fermentum posuere. Eu faucibus imperdiet risus tellus velit. Ultrices id tellus tristique purus sit quis fermentum ultricies convallis. Pharetra nunc laoreet in condimentum dolor et ultrices leo ultrices. Massa diam urna proin non commodo nec vel tristique. Amet egestas facilisi purus diam fermentum adipiscing nunc non nunc. Faucibus elementum id viverra urna eu at. Lectus adipiscing lorem massa suspendisse non arcu eu ut. Fringilla amet lacus lectus nunc purus. Odio hendrerit eu et volutpat justo ut.</p>
