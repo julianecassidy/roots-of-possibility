@@ -10,7 +10,11 @@ const { pageTitleWords, pageDesc } = Astro.props;
 
 const pageTitle = pageTitleWords
     .map((word) => {
-        return `<span class="font-${word.style} ${word.style === "display" ? "text-7xl" : "text-5xl"}">${word.text}</span>`;
+        return `<span class="${word.style === "display"
+            ? "font-display text-7xl"
+            : "font-serif text-5xl"}"
+                >${word.text}
+            </span>`;
     })
     .join(" ");
 
