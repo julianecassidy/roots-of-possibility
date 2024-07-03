@@ -1,9 +1,10 @@
 ---
 interface Props {
 	color: "primary" | "secondary";
+    width?: string | number;
 }
 
-const { color } = Astro.props;
+const { color, width } = Astro.props;
 let style = '';
 
 switch (color) {
@@ -15,9 +16,11 @@ switch (color) {
         break;
 }
 
+const widthFormatted = width ? `w-${width}` : "";
+
 console.log(style);
 ---
 
-<button class=`${style} border border-none rounded-3xl px-6 py-1 transition duration-200 ease-in-out max-h-12 text-2xl`>
+<button class=`${style} ${widthFormatted} border border-none rounded-3xl px-6 py-1 transition duration-200 ease-in-out max-h-12 text-2xl`>
     <slot />
 </button>

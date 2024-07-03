@@ -8,11 +8,7 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img
-            src="./logo.png"
-            alt="roots of possiblity logo"
-            class="w-24"
-          />
+          <img src="./logo.png" alt="roots of possiblity logo" class="w-24" />
         ) : (
           SITE.title
         )
@@ -57,45 +53,77 @@ import Button from "@layouts/Button.astro";
   </label>
   <div class="mobile-menu">
     <ul>
-    <a href="/about"><li>About</li></a>
-      <a href="/about">
-        <li class="flex">
-          Services
-          <span
-            ><svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
-                fill="#111D13"></path>
-            </svg></span
+      <a href="/about"><li>About</li></a>
+      <a href="/services">
+        <div class="dropdown dropdown-hover">
+          <div tabindex="0" role="button" class="btn m-1">
+            <li class="flex">
+              Services
+              <span
+                ><svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
+                    fill="#111D13"></path>
+                </svg></span
+              >
+            </li>
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
           >
-        </li></a
-      >
+            <a href="/services/children"><li>Children</li></a>
+            <a href="/services/adolescents"><li>Adolescents</li></a>
+            <a href="/services/young-adults"><li>Young Adults</li></a>
+            <a href="/services/children"><li>Children</li></a>
+            <a href="/services/children"><li>Children</li></a>
+            <a href="/services/children"><li>Children</li></a>
+          </ul>
+        </div>
+      </a>
       <a href="/philosophy"><li>Philosophy</li></a>
       <a href="/resources"><li>Resources</li></a>
       <a href="/faq"><li>FAQ</li></a>
       <a href="/client-portal"><li>Client Portal</li></a>
     </ul>
-    <Button color="primary"> Contact </Button>
+    <div class="mobile-menu-contact">
+      <Button color={"primary"} width={"3/4"}> Contact </Button>
+    </div>
   </div>
   <nav>
     <ul>
       <a href="/about"><li>About</li></a>
-      <a href="/about">
-        <li class="flex">
-          Services
-          <span
-            ><svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
-                fill="#111D13"></path>
-            </svg></span
-          >
-        </li></a
-      >
+      <a href="/services">
+        <div class="dropdown dropdown-hover">
+          <div tabindex="0" role="button">
+            <li class="flex flex-nowrap">
+              Services
+              <span
+                ><svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
+                    fill="#111D13"></path>
+                </svg></span
+              >
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-accent rounded-box z-30 w-52 pt-2 px-2 pb-3 shadow"
+              >
+                <a href="/services/children"><li>Children</li></a>
+                <a href="/services/adolescents"><li>Adolescents</li></a>
+                <a href="/services/young-adults"><li>Young Adults</li></a>
+                <a href="/services/children"><li>Children</li></a>
+                <a href="/services/children"><li>Children</li></a>
+                <a href="/services/children"><li>Children</li></a>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </a>
       <a href="/about"><li>Philosophy</li></a>
     </ul>
     <Button color="primary"> Contact </Button>
@@ -112,7 +140,6 @@ import Button from "@layouts/Button.astro";
   nav {
     @apply hidden md:flex grow justify-end items-center mr-4;
   }
-
   nav ul {
     @apply flex items-center gap-8 mr-8;
   }
@@ -126,28 +153,22 @@ import Button from "@layouts/Button.astro";
   nav a.active {
     @apply underline decoration-primary decoration-2 underline-offset-[12px];
   }
-
   .mobile-menu {
     position: absolute;
     z-index: 30;
-    width: 100%;
+    width: 0px;
     height: 100%;
     top: 0;
-    right: -0px;
-    padding: 50px;
+    right: 0;
     padding-top: 100px;
-    background-color: #A3B18A;
+    display: flex;
+    flex-direction: column;
+    background-color: #a3b18a;
     -webkit-font-smoothing: antialiased;
-    transform-origin: (-100%, 0);
-    transform: translate(0, 0);
-    transition: transform 5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-
-  .mobile-menu.hidden {
-    transform: (100%, 0);
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   .mobile-menu ul {
-    @apply list-none mb-4;
+    @apply list-none mb-4 px-24;
   }
 
   .mobile-menu a {
@@ -158,7 +179,9 @@ import Button from "@layouts/Button.astro";
     padding: 10px 0;
     transition-delay: 2s;
   }
-
+  .mobile-menu-contact {
+    @apply pl-16;
+  }
   #hamberger-menu input:checked ~ ul {
     transform: none;
   }
@@ -168,14 +191,18 @@ import Button from "@layouts/Button.astro";
   function toggleNav() {
     console.log("toggleNav runs");
     // Toggle menu
-    const open = document.querySelector("input[type=checkbox]") as HTMLInputElement;
-    const menuBtn = document.querySelector("#hamburger-menu") as HTMLLabelElement;
-    const menuItems = document.querySelector(".mobile-menu");
+    const open = document.querySelector(
+      "input[type=checkbox]",
+    ) as HTMLInputElement;
+    const menuBtn = document.querySelector(
+      "#hamburger-menu",
+    ) as HTMLLabelElement;
+    const menuItems = document.querySelector(".mobile-menu") as HTMLDivElement;
 
     console.log({ menuBtn, open });
 
     open.addEventListener("change", () => {
-      console.log("callback runs")
+      console.log("callback runs");
       const menuExpanded = open.checked;
       console.log(menuExpanded);
       menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
@@ -183,7 +210,8 @@ import Button from "@layouts/Button.astro";
         "aria-label",
         menuExpanded ? "Open Menu" : "Close Menu",
       );
-      menuItems?.classList.toggle("hidden");
+
+      menuItems.style.width = menuExpanded ? "100%" : "0";
     });
   }
 
