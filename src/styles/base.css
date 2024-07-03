@@ -36,27 +36,19 @@
   }
 
   p {
-    @apply mb-2 text-base font-sans;
+    @apply mb-2 text-base font-sans font-light;
   }
 
   a {
     @apply text-primary hover:text-secondary;
   }
 
-  button {
-    @apply text-base text-2xl;
-  }
-
   ul {
-    @apply list-image-leaf;
-  }
-
-  li {
-    @apply font-sans;
+    @apply font-sans font-light;
   }
 
   ol {
-    @apply list-decimal pl-12 font-sans;
+    @apply list-decimal pl-12 font-sans font-light;
   }
 
   small {
