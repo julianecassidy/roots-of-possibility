@@ -67,16 +67,16 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    @apply bg-secondary bg-opacity-70;
+    @apply bg-accent bg-opacity-60;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary bg-opacity-70;
+    @apply bg-secondary bg-opacity-40;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
+    @apply bg-secondary bg-opacity-70;
   }
 }
