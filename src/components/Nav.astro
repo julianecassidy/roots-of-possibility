@@ -1,8 +1,10 @@
 ---
 import { LOGO_IMAGE, SITE } from "@config";
+import AuxNav from "./AuxNav.astro";
 import Button from "@layouts/Button.astro";
 ---
 
+<AuxNav />
 <div class="nav-bar">
   <div class="nav-logo">
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
@@ -153,6 +155,7 @@ import Button from "@layouts/Button.astro";
   }
   .mobile-menu {
     position: absolute;
+    overflow: hidden;
     z-index: 30;
     width: 0px;
     height: 100%;
