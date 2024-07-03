@@ -52,37 +52,35 @@ import Button from "@layouts/Button.astro";
     </svg>
   </label>
   <div class="mobile-menu">
-    <ul>
+    <ul class="mobile-menu-main-list">
       <a href="/about"><li>About</li></a>
-      <a href="/services">
-        <div class="dropdown dropdown-hover">
-          <div tabindex="0" role="button" class="btn m-1">
-            <li class="flex">
-              Services
-              <span
-                ><svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
-                    fill="#111D13"></path>
-                </svg></span
+      <div class="flex justify-between pt-2.5 -mb-3.5">
+        <a href="/services">Services</a>
+        <div class="collapse">
+          <input type="checkbox" />
+          <div class="collapse-title p-0">
+            <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
+                fill="#111D13"
               >
-            </li>
+              </path>
+            </svg>
           </div>
-          <ul
-            tabindex="0"
-            class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
-          >
-            <a href="/services/children"><li>Children</li></a>
-            <a href="/services/adolescents"><li>Adolescents</li></a>
-            <a href="/services/young-adults"><li>Young Adults</li></a>
-            <a href="/services/children"><li>Children</li></a>
-            <a href="/services/children"><li>Children</li></a>
-            <a href="/services/children"><li>Children</li></a>
-          </ul>
+          <div class="collapse-content">
+            <ul class="pl-4">
+              <a href="/services/children"><li>Children</li></a>
+              <a href="/services/adolescents"><li>Adolescents</li></a>
+              <a href="/services/young-adults"><li>Young Adults</li></a>
+              <a href="/services/children"><li>Children</li></a>
+              <a href="/services/children"><li>Children</li></a>
+              <a href="/services/children"><li>Children</li></a>
+            </ul>
+          </div>
         </div>
-      </a>
+      </div>
       <a href="/philosophy"><li>Philosophy</li></a>
       <a href="/resources"><li>Resources</li></a>
       <a href="/faq"><li>FAQ</li></a>
@@ -96,31 +94,31 @@ import Button from "@layouts/Button.astro";
     <ul>
       <a href="/about"><li>About</li></a>
       <a href="/services">
-        <div class="dropdown dropdown-hover">
+        <div class="dropdown dropdown-hover dropdown-bottom">
           <div tabindex="0" role="button">
             <li class="flex flex-nowrap">
               Services
-              <span
-                ><svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
+              <span>
+                <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
                     fill="#111D13"></path>
-                </svg></span
-              >
-              <ul
-                tabindex="0"
-                class="dropdown-content menu bg-accent rounded-box z-30 w-52 pt-2 px-2 pb-3 shadow"
-              >
-                <a href="/services/children"><li>Children</li></a>
-                <a href="/services/adolescents"><li>Adolescents</li></a>
-                <a href="/services/young-adults"><li>Young Adults</li></a>
-                <a href="/services/children"><li>Children</li></a>
-                <a href="/services/children"><li>Children</li></a>
-                <a href="/services/children"><li>Children</li></a>
-              </ul>
+                </svg>
+              </span>
             </li>
+            <ul
+              tabindex="0"
+              class="dropdown-content menu bg-accent rounded-box z-30 w-52 pt-2 px-2 pb-3 shadow"
+            >
+              <a href="/services/children"><li>Children</li></a>
+              <a href="/services/adolescents"><li>Adolescents</li></a>
+              <a href="/services/young-adults"><li>Young Adults</li></a>
+              <a href="/services/children"><li>Children</li></a>
+              <a href="/services/children"><li>Children</li></a>
+              <a href="/services/children"><li>Children</li></a>
+            </ul>
           </div>
         </div>
       </a>
@@ -167,7 +165,7 @@ import Button from "@layouts/Button.astro";
     -webkit-font-smoothing: antialiased;
     transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-  .mobile-menu ul {
+  .mobile-menu-main-list {
     @apply list-none mb-4 px-24;
   }
 
@@ -176,8 +174,7 @@ import Button from "@layouts/Button.astro";
   }
 
   .mobile-menu li {
-    padding: 10px 0;
-    transition-delay: 2s;
+    @apply py-2.5;
   }
   .mobile-menu-contact {
     @apply pl-16;
