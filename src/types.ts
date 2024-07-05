@@ -34,7 +34,15 @@ export type Tag = {
   name: string;
 };
 
-export type tTitleStyles = {
+export type TitleStyles = {
   text: string;
   style: "serif" | "display";
 };
+
+export type ServiceCard = {
+  imagePath: string;
+  altText: string;
+  title: string;
+  description: string;
+  buttonLink: string;
+}

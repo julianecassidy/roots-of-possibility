@@ -1,4 +1,4 @@
-import type { Site, SocialObject } from "./types";
+import type { Site, SocialObject, ServiceCard } from "./types";
 
 export const SITE: Site = {
   website: "https://rootsofpossibility.com", // replace this with your deployed domain
@@ -41,3 +41,60 @@ export const MENTALHEALTHMATCH: SocialObject = {
     linkTitle: `Julia on Mental Health Match`,
     active: false,
 }
+
+const CHILDREN: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const ADOLESCENTS: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const YOUNG_ADULTS: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const TRAUMA: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const SELF_HARM: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const ATTACHMENT: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+export const SERVICES = [
+  CHILDREN,
+  ADOLESCENTS,
+  YOUNG_ADULTS,
+  TRAUMA,
+  SELF_HARM,
+  ATTACHMENT,
+];

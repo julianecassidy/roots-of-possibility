@@ -1,0 +1,24 @@
+---
+import type { ServiceCard } from "types";
+import { Image } from "astro:assets";
+import Button from "@layouts/Button.astro";
+
+type Props = ServiceCard;
+
+const { imagePath, altText, title, description, buttonLink } = Astro.props;
+---
+
+<div
+    class="w-[380px] h-[550px] flex flex-col items-center gap-4 bg-base-100 text-neutral p-6 border border-none rounded-t-[180px] rounded-b-xl"
+>
+    <Image
+        src={imagePath}
+        alt={altText}
+        width={320}
+        height={320}
+        class="w-[330px] h-[330px] object-cover border border-none rounded-t-[150px] rounded-b-lg"
+    />
+    <h3 class="text-center -my-1">{title}</h3>
+    <div class="text-lg">{description}</div>
+    <Button color="primary" link={buttonLink}> Learn More </Button>
+</div>
