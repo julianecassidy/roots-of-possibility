@@ -1,0 +1,50 @@
+---
+import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
+import { Image } from "astro:assets";
+import leaves2 from "@assets/florals/leaves-2.png";
+import indy from "@assets/indy.jpg";
+import octo from "@assets/octo.png";
+---
+
+<GreenWavyBlock>
+    <div
+    class="relative flex flex-wrap flex-col-reverse md:flex-row justify-center items-center sm:flex-nowrap gap-8 py-8 mx-8 sm:mx-24"
+    >
+    <Image
+        src={leaves2}
+        alt="black and white drawing of leaves"
+        width={500}
+        class="absolute z-0 opacity-10 md:opacity-20 -rotate-[135deg] -top-56"
+    />
+        <div class="w-full md:w-1/2 lg:w-2/3">
+            <h2>Animal Assisted Therapy in Denver</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur. Neque maecenas venenatis
+                donec id non vel dignissim amet nec. Amet ut gravida nunc
+                malesuada. Dolor magnis et id a ultrices eleifend aliquam purus
+                rutrum. Quis consequat aliquet eu fermentum posuere. Eu faucibus
+                imperdiet risus tellus velit. Ultrices id tellus tristique purus
+                sit quis fermentum ultricies convallis. Pharetra nunc laoreet in
+                condimentum dolor et ultrices leo ultrices. Massa diam urna
+                proin non commodo nec vel tristique. Amet egestas facilisi purus
+                diam fermentum adipiscing nunc non nunc. Faucibus elementum id
+                viverra urna eu at. Lectus adipiscing lorem massa suspendisse
+                non arcu eu ut.
+            </p>
+        </div>
+        <div class="w-4/5 md:1/2 lg:w-1/3 -top-16 relative">
+            <Image
+                src={indy}
+                alt="yellow rose with label roses"
+                width={400}
+                class="w-[300px] md:w-[400px] border border-none rounded-2xl relative z-20 mx-auto"
+            />
+            <Image
+                src={octo}
+                alt="yellow rose with label roses"
+                height={200}
+                class="w-[100px] md:w-[200px] border border-none rounded-2xl -rotate-12 absolute z-10 -bottom-16 md:-bottom-28 -right-8 md:-right-16"
+            />
+        </div>
+    </div>
+</GreenWavyBlock>
