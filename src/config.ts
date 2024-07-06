@@ -28,6 +28,13 @@ export const PSYCHOLOGYTODAY: SocialObject = {
     active: true,
 }
 
+export const INSTAGRAM: SocialObject = {
+    name: "Instagram",
+    href: "https://www.psychologytoday.com/us/therapists/julia-kuttler-boulder-co/1293002",
+    linkTitle: `Julia on Instagram`,
+    active: true,
+}
+
 export const THERAPYDEN: SocialObject = {
     name: "Therapy Den",
     href: "https://www.therapyden.com/therapist/julia-kuttler",

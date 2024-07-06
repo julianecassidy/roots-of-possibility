@@ -17,7 +17,8 @@ export type SocialObject = {
 export type SocialMedia =
   | "Psychology Today"
   | "Therapy Den"
-  | "Mental Health Match";
+  | "Mental Health Match"
+  | "Instagram";
 
 export type Post = {
   id: number;
