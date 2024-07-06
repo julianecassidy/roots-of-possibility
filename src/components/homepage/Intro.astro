@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import indy from "@assets/indy.jpg";
+import octo from "@assets/octo.png";
+import Button from "@layouts/Button.astro";
+---
+
+<div class="mt-24 mb-12 sm:max-md:mt-12 flex flex-wrap justify-center items-center sm:flex-nowrap gap-6 mx-8 sm:mx-24 2xl:mx-64">
+    <div class="w-4/5 md:1/2 lg:w-1/4 relative">
+            <Image
+                src={indy}
+                alt="yellow rose with label roses"
+                width={400}
+                class="border border-none rounded-2xl relative z-10 mx-auto"
+            />
+            <Image
+                src={octo}
+                alt="yellow rose with label roses"
+                height={200}
+                class="border border-none rounded-2xl -rotate-12 absolute z-20 -top-16 -left-16"
+            />
+    </div>
+    <div class="w-full lg:w-3/4">
+        <h2>Children, Adolescent, and Young Adult Therapy</h2>
+        <p>
+            I work with children, adolescents, and their families. My therapeutic approach is collaborative, client-centered, and strengths-based, & I also believe in integrating fun activities to facilitate relationship-building and keep kids engaged, whether that may be art, games, reading together, or otherwise accommodating their unique interests.
+        </p>
+        <p>
+            When you love someone who is having a difficult time, it's easy to feel out of your depth or unsure of how to help. Whether your child has been struggling for a while, or something has recently changed and they need professional help for the first time, I am here to support you both. Reach out to me today to start your journey!
+        </p>
+        <div class="mt-8 w-full flex flex-col items-center justify-center gap-3 md:flex-row">
+            <Button color="primary" link="/about" otherClasses="grow whitespace-nowrap">About Julia</Button>
+            <Button color="primary" link="/services" otherClasses="grow whitespace-nowrap">Services</Button>
+            <Button color="primary" link="/contact" otherClasses="grow whitespace-nowrap">Schedule a Consultation</Button>
+        </div>
+    </div>
+</div>

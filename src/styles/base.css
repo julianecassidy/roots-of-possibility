@@ -7,16 +7,20 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-base-100 font-body text-base text-neutral
-    mb-4 relative selection:bg-accent selection:bg-opacity-70;
+    @apply flex min-h-[100svh] flex-col bg-base-100 font-body font-light text-base
+    text-neutral mb-4 relative selection:bg-accent selection:bg-opacity-70;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-semibold tracking-wider text-base my-6;
+    @apply tracking-wider text-base my-1;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold tracking-wider;
   }
 
   h1 {
-    @apply text-2xl sm:text-3xl md:text-4xl;
+    @apply lg:leading-normal text-center;
   }
 
   h2 {
@@ -32,19 +36,19 @@
   }
 
   p {
-    @apply mb-2 text-base font-sans;
+    @apply mb-2 text-base font-sans font-light;
   }
 
   a {
     @apply text-primary hover:text-secondary;
   }
 
-  li {
-    @apply font-sans;
+  ul {
+    @apply font-sans font-light;
   }
 
   ol {
-    @apply list-decimal pl-12 font-sans;
+    @apply list-decimal pl-12 font-sans font-light;
   }
 
   small {
@@ -63,16 +67,16 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    @apply bg-secondary bg-opacity-70;
+    @apply bg-accent bg-opacity-60;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary bg-opacity-70;
+    @apply bg-secondary bg-opacity-40;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
+    @apply bg-secondary bg-opacity-70;
   }
 }

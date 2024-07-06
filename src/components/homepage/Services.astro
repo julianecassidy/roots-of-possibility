@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import { SERVICES } from "@config";
+import ServiceCard from "@components/ServiceCard.astro";
+import leavesWhite from "@assets/florals/leaves-white.png";
+---
+
+<div class="-mt-16 md:-mt-48">
+    <svg viewBox="0 25 900 150" class="-mb-px w-full"
+        ><rect x="0" y="0" width="900" height="600" fill="#3A5A40"></rect><path
+            d="M0 119L30 115.8C60 112.7 120 106.3 180 92.5C240 78.7 300 57.3 360 62.2C420 67 480 98 540 114.8C600 131.7 660 134.3 720 118.8C780 103.3 840 69.7 870 52.8L900 36L900 0L870 0C840 0 780 0 720 0C660 0 600 0 540 0C480 0 420 0 360 0C300 0 240 0 180 0C120 0 60 0 30 0L0 0Z"
+            fill="#D0D7C4"
+            stroke-linecap="round"
+            stroke-linejoin="miter"></path></svg
+    >
+    <div class="bg-secondary text-base-100 p-4 md:px-8 xl:px-10 2xl:px-48 relative overflow-hidden z-10">
+        <Image
+            src={leavesWhite}
+            alt="drawing of leaves on branch"
+            class="absolute z-20 opacity-20 md:opacity-40 rotate-45 -top-36 md:-top-48 right-32 md:right-48"
+        />
+        <h2 class="font-display text-6xl text-center mt-0 mb-8">
+            Therapy Services
+        </h2>
+        <div class="flex flex-wrap justify-center gap-8 xl:gap-16 relative z-30">
+            {
+                SERVICES.map((service) => (
+                    <ServiceCard
+                        title={service.title}
+                        description={service.description}
+                        buttonLink={service.buttonLink}
+                        imagePath={service.imagePath}
+                        altText={service.altText}
+                    />
+                ))
+            }
+        </div>
+    </div>
+    <svg viewBox="0 400 900 200" class="-mt-px w-full relative z-10"
+        ><rect x="0" y="0" width="900" height="600" fill="#3A5A40"></rect><path
+            d="M0 458L16.7 475.2C33.3 492.3 66.7 526.7 100 544.2C133.3 561.7 166.7 562.3 200 546.2C233.3 530 266.7 497 300 482.2C333.3 467.3 366.7 470.7 400 483C433.3 495.3 466.7 516.7 500 523.3C533.3 530 566.7 522 600 508.3C633.3 494.7 666.7 475.3 700 467C733.3 458.7 766.7 461.3 800 476.8C833.3 492.3 866.7 520.7 883.3 534.8L900 549L900 601L883.3 601C866.7 601 833.3 601 800 601C766.7 601 733.3 601 700 601C666.7 601 633.3 601 600 601C566.7 601 533.3 601 500 601C466.7 601 433.3 601 400 601C366.7 601 333.3 601 300 601C266.7 601 233.3 601 200 601C166.7 601 133.3 601 100 601C66.7 601 33.3 601 16.7 601L0 601Z"
+            fill="#F5F5F5"
+            stroke-linecap="round"
+            stroke-linejoin="miter"></path></svg
+    >
+</div>

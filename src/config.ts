@@ -1,4 +1,4 @@
-import type { Site, SocialObject } from "./types";
+import type { Site, SocialObject, ServiceCard } from "./types";
 
 export const SITE: Site = {
   website: "https://rootsofpossibility.com", // replace this with your deployed domain
@@ -28,6 +28,13 @@ export const PSYCHOLOGYTODAY: SocialObject = {
     active: true,
 }
 
+export const INSTAGRAM: SocialObject = {
+    name: "Instagram",
+    href: "https://www.psychologytoday.com/us/therapists/julia-kuttler-boulder-co/1293002",
+    linkTitle: `Julia on Instagram`,
+    active: true,
+}
+
 export const THERAPYDEN: SocialObject = {
     name: "Therapy Den",
     href: "https://www.therapyden.com/therapist/julia-kuttler",
@@ -41,3 +48,60 @@ export const MENTALHEALTHMATCH: SocialObject = {
     linkTitle: `Julia on Mental Health Match`,
     active: false,
 }
+
+const CHILDREN: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const ADOLESCENTS: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const YOUNG_ADULTS: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const TRAUMA: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const SELF_HARM: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+const ATTACHMENT: ServiceCard = {
+  title: "Therapy for Children",
+  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+  buttonLink: "/children",
+  imagePath: "/indy.jpg",
+  altText: "drawn red rose",
+}
+
+export const SERVICES = [
+  CHILDREN,
+  ADOLESCENTS,
+  YOUNG_ADULTS,
+  TRAUMA,
+  SELF_HARM,
+  ATTACHMENT,
+];

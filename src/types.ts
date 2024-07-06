@@ -17,7 +17,8 @@ export type SocialObject = {
 export type SocialMedia =
   | "Psychology Today"
   | "Therapy Den"
-  | "Mental Health Match";
+  | "Mental Health Match"
+  | "Instagram";
 
 export type Post = {
   id: number;
@@ -27,9 +28,22 @@ export type Post = {
   date: string;
   canonical: string;
   tags: Array<Tag>
-}
+};
 
 export type Tag = {
   id: number;
   name: string;
+};
+
+export type TitleStyles = {
+  text: string;
+  style: "serif" | "display";
+};
+
+export type ServiceCard = {
+  imagePath: string;
+  altText: string;
+  title: string;
+  description: string;
+  buttonLink: string;
 }

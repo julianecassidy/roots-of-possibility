@@ -1,0 +1,28 @@
+---
+interface Props {
+    color: "primary" | "secondary";
+    link: string;
+    otherClasses?: string;
+}
+
+const { color, link, otherClasses } = Astro.props;
+let colorStyle = "";
+
+switch (color) {
+    case "primary":
+        colorStyle = "bg-primary text-base-100 hover:bg-secondary";
+        break;
+    case "secondary":
+        colorStyle = "bg-base-100 text-neutral hover:bg-accent";
+        break;
+}
+
+---
+
+<a href={link}>
+    <button
+        class=`${colorStyle} ${otherClasses} border border-none rounded-full px-6 py-1 transition duration-200 ease-in-out max-h-12 text-2xl`
+    >
+        <slot />
+    </button>
+</a>
