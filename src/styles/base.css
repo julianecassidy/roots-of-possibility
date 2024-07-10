@@ -24,7 +24,7 @@
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-4xl;
   }
 
   h3 {
@@ -36,7 +36,7 @@
   }
 
   p {
-    @apply mb-2 text-base font-sans font-light;
+    @apply mb-2 text-base text-lg font-sans font-light;
   }
 
   a {
@@ -44,7 +44,7 @@
   }
 
   ul {
-    @apply font-sans font-light;
+    @apply font-sans font-light text-lg;
   }
 
   ol {
