@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import type { TitleStyles } from "types";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import SinglePhotoBlock from "@components/SinglePhotoBlock.astro";
+import julia from "@assets/indy.jpg";
+import dottie1 from "@assets/indy.jpg";
+import dottie2 from "@assets/indy.jpg";
+import florals from "@assets/florals/leaves-1.png";
+import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
+
+const pageTitle: TitleStyles[] = [
+    { text: "About", style: "serif" },
+    { text: "Julia", style: "display" },
+    { text: "&", style: "serif" },
+    { text: "Dottie", style: "display" },
+];
+const pageDesc =
+    "Lorem ipsum dolor sit amet consectetur. Ultrices dolor feugiat sed sed ullamcorper vel egestas et. Volutpat amet in fermentum hac.";
+const aboutJuliaTitle = "Get to Know Me";
+const aboutJuliaText = `<p>I was born and raised in Colorado, and have spent the majority of my life here, outside of the time I spent living in Berlin, Germany as a student and post-grad. I love reading, kickboxing, spending time with my family, friends, and pets, playing video games, and trying new recipes, but above all I love to travel. It was getting out of the country and exploring new places and cultures that inspired my passion for living each day with the goal of making memories and making an impact.</p>
+
+<p>My interest in animal-assisted interventions, and my belief in the powers of the human-animal bond, is what initially brought me to social work. The core values of the discipline are what kept me in the field, in particular the values of service, social justice, dignity and worth of the person, and the importance of human relationships. I also strive everyday to embody the integrity and competence that are integral to my profession.</p>
+
+<p>A few more facts about me:</p>
+<ul class="list-disc list-inside mb-4">
+<li>I love visiting farm sanctuaries to hang out with rescued barnyard animals.</li>
+<li>Some of my favorite places I’ve visited around the world include Bosnia and Herzegovina, Rome, and Edinburgh, but Berlin will always be my #1!</li>
+<li>Attending concerts and other live performances is another one of my greatest interests.</li>
+</ul>`;
+const aboutJuliaAltText = "julia";
+const aboutDottieTitle = "Get to Know Dottie Lou";
+const aboutDottieText =
+    "Dorothy Elouise, or Dottie Lou for short, is a rescued bulldog mix who is registered as a therapy dog through Professional Therapy Dogs of Colorado. Therapy dogs like Dottie are specially trained and behaviorally evaluated to ensure a loving temperament and consistently positive interactions with people. Dottie’s love for humans and the rest of the world around her shines through with every person she meets. Therapy animals are also great for modeling and practicing social skills, discussing boundaries, and so much more - check out this page to learn more [link to AAT-specific services page].";
+const aboutDottieAltText = "dottie";
+const backgroundTitle = "Background";
+const backgroudText = `
+<p>Starting my career in schools and special education, I have had the privilege to work with a wide range of ages, backgrounds, and issues. My areas of specialty include:</p>
+<ul class="list-disc list-inside mb-4">
+<li>Mood disorders</li>
+<li>Depression and anxiety</li>
+<li>Self harming behaviors and self-injury</li>
+<li>Suicidal ideation</li>
+<li>Trauma and post-traumatic stress disorder (PTSD)</li>
+<li>Neurodivergence, including attention deficit disorder (ADD/ADHD) and the Autism spectrum (ASD)</li>
+<li>LGBTQIA+ identities</li>
+<li>Life transitions, including puberty, school transitions, and changing living or family circumstances</li>
+<li>Self esteem issues, low confidence, and/or perfectionism</li>
+</ul>
+<p>Thanks to my time in public education, I also have extensive training and experience working with children with all kinds of disabilities and within the Gifted and Talented (GT) community, including the overlap of these labels, commonly known as Twice Exceptional or 2E. </p>
+
+<p>I received both my Bachelor’s in Psychology and Master of Social Work with a concentration in Mental Health from the University of Denver and am licensed to practice in the state of Colorado.</p>
+`;
+---
+
+<Layout title="Roots of Possibility | About">
+    <Main>
+        <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+        <SinglePhotoBlock
+            title={aboutJuliaTitle}
+            content={aboutJuliaText}
+            image={julia}
+            imageAlt={aboutJuliaAltText}
+        />
+        <GreenWavyBlock>
+            <div
+                class="flex flex-col-reverse lg:flex-row items-center justify-center gap-x-16 gap-y-8 p-4 sm:px-8 xl:px-10 2xl:px-48 overflow-hidden"
+            >
+                <div class="w-full lg:w-2/3">
+                    <h2 class="text-center my-8">{aboutDottieTitle}</h2>
+                    <div set:html={aboutDottieText} />
+                </div>
+                <div class="w-1/2 lg:w-1/4 relative mt-12">
+                    <Image
+                        src={dottie1}
+                        alt={aboutDottieAltText}
+                        class="border border-none rounded-2xl relative z-10"
+                    />
+                    <Image
+                        src={dottie2}
+                        alt={aboutDottieAltText}
+                        class="w-1/2 border border-none rounded-xl absolute z-20 -bottom-12 -right-12 lg:-top-12 lg:-left-12"
+                    />
+                </div>
+            </div>
+        </GreenWavyBlock>
+        <div class="flex justify-center p-4 sm:px-8 lg:px-24 2xl:px-56">
+            <Image
+                src={florals}
+                alt="drawing of leaves"
+                class="hidden lg:block opacity-20 w-1/4"
+            />
+            <div class="w-full lg:w-3/4">
+                <h2 class="text-center mb-8">{backgroundTitle}</h2>
+                <div set:html={backgroudText} />
+            </div>
+        </div>
+    </Main>
+</Layout>
