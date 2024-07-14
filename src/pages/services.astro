@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import type { TitleStyles } from "types";
+import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
+import { SERVICES } from "@config";
+import ServiceCard from "@components/ServiceCard.astro";
+import image1 from "@assets/indy.jpg";
+import image2 from "@assets/octo.png";
+
+const pageTitle: TitleStyles[] = [
+    { text: "Therapy", style: "serif" },
+    { text: "Services", style: "display" },
+];
+const pageDesc =
+    "Lorem ipsum dolor sit amet consectetur. Ultrices dolor feugiat sed sed ullamcorper vel egestas et. Volutpat amet in fermentum hac.";
+const image1AltText = "image1 alt text";
+const image2AltText = "image2 alt text";
+const servicesTitle = "A Title About Services";
+const servicesContent =
+    "Lorem ipsum dolor sit amet consectetur. Neque maecenas venenatis donec id non vel dignissim amet nec. Amet ut gravida nunc malesuada. Dolor magnis et id a ultrices eleifend aliquam purus rutrum. Quis consequat aliquet eu fermentum posuere. Eu faucibus imperdiet risus tellus velit. Ultrices id tellus tristique purus sit quis fermentum ultricies convallis. Pharetra nunc laoreet in condimentum dolor et ultrices leo ultrices. Massa diam urna proin non commodo nec vel tristique. Amet egestas facilisi purus diam fermentum adipiscing nunc non nunc. Faucibus elementum id viverra urna eu at. Lectus adipiscing lorem massa suspendisse non arcu eu ut. Fringilla amet lacus lectus nunc purus. Odio hendrerit eu et volutpat justo ut.";
+const listItems = [
+    "Dialectical Behavioral Therapy (DBT) - pursuing a “life worth living” by learning to tolerate distress, reducing maladaptive (unhealthy) coping skills by building adaptive (healthy) strategies to manage emotions and behaviors. DBT also has a strong foundation in self-respect and boundary cultivation.",
+    "Acceptance and Commitment Therapy (ACT) - based on the idea of creating a meaningful and enjoyable life, and working through inevitable hard times and struggles, while grounding in our values and self-compassion.",
+    "Motivational Interviewing (MI) - affirming your existing strengths and innate abilities to overcome your problems through client-clinician collaboration, while centering your autonomy.",
+    "Solution-Focused Brief Therapy (SFBT) - goal-directed, solution-oriented, and built around the goal of one day no longer needing therapy.",
+    "Narrative Therapy - honoring your story and role as the expert of your own life and experiences, driven by a sense of purpose and aiming to help you see your problems as external, rather than reflecting them inwards and amplifying distress.",
+];
+---
+
+<Layout title="Roots of Possibility | Therapy Services">
+    <Main>
+        <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+        <GreenWavyBlock>
+            <div
+                class="flex flex-col-reverse lg:flex-row items-center justify-center gap-x-16 gap-y-8 p-4 sm:px-16 xl:px-32 2xl:px-64 overflow-hidden"
+            >
+                <div class="w-1/2 lg:w-1/4 relative mt-12">
+                    <Image
+                        src={image1}
+                        alt={image1AltText}
+                        class="border border-none rounded-2xl relative z-10"
+                    />
+                    <Image
+                        src={image2}
+                        alt={image2AltText}
+                        class="w-1/2 border border-none rounded-xl absolute z-20 -bottom-12 -right-12 lg:-top-12 lg:-left-12"
+                    />
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <h2 class="text-center my-8">{servicesTitle}</h2>
+                    <div set:html={servicesContent} />
+                </div>
+            </div>
+        </GreenWavyBlock>
+        <div
+            class="flex flex-wrap justify-center gap-8 xl:gap-16 relative z-30 p-4 md:px-8 xl:px-10 2xl:px-48"
+        >
+            {
+                SERVICES.map((service) => (
+                    <ServiceCard
+                        title={service.title}
+                        description={service.description}
+                        buttonLink={service.buttonLink}
+                        imagePath={service.imagePath}
+                        altText={service.altText}
+                        bgColor="bg-secondary"
+                        textColor="text-base-100"
+                        buttonColor="primary"
+                    />
+                ))
+            }
+        </div>
+        <div class="mt-8 p-4 sm:px-16 xl:px-48 2xl:px-64">
+            <h2 class="text-center">A Note About Modalities</h2>
+            <p>
+                In the context of therapy, "modalities" refers to the different approaches or methods used by therapists to address psychological or emotional issues in their clients. The evidence-based practices I incorporate include:
+            </p>
+            <ul class="mb-4 ml-5">
+                {listItems.map(item => <li class="service-list-item">{item}</li>)}
+            </ul>
+        </div>
+    </Main>
+</Layout>
+
+<style>
+    .service-list-item {
+        @apply my-2 even:list-image-leafLight odd:list-image-leafDark;
+    }
+</style>

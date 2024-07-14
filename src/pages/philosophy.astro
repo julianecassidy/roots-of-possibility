@@ -1,0 +1,45 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import type { TitleStyles } from "types";
+
+const pageTitle: TitleStyles[] = [
+    { text: "Philosophy", style: "display" },
+    { text: "&", style: "serif" },
+    { text: "Beliefs", style: "display" },
+];
+const pageDesc = "I am an LGBTQIA+ and neurodiversity-affirming therapist. This means…";
+
+const listItems = [
+    "I am dedicated to creating a safe and supportive environment for clients of all sexual orientations, gender identities, and expressions, where their identities are respected, validated, and integrated into therapy.",
+    " I am committed to recognizing and respecting the diverse ways in which individuals' brains function, and tailoring therapy to support and celebrate these differences rather than pathologizing them.",
+]
+const pageContent = `
+    <p>As a clinician, I also believe in Health at Every Size (HAES). HAES principles include weight inclusivity, promoting eating for well-being, and supporting life-enhancing movement. I am anti-diet, will never promote restrictive eating practices, and I am wholeheartedly invested in developing and holding a space that will not judge people based on moralizing food choices or false hierarchies of “good” and “bad” bodies.</p>
+    <p>It is also important to me to acknowledge my own lived experiences as a participant in therapy; I know firsthand the struggles and successes that come with the work a client and clinician can do together, from both sides of the equation. These lived experiences provide me with additional, deeper understanding of the process, bumps along the road, and potential to find your way to a life where you are not simply existing, but thriving.</p>
+`
+
+
+---
+
+<Layout title="Roots of Possibility | Philosophy & Beliefs">
+    <Main>
+        <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+        <div class="mx-4 sm:mx-8 md:mx-16 lg:mx-48 2xl:mx-64 text-lg">
+            <ul class="mb-4 ml-5">
+                {listItems.map(item => <li class="phil-list-item">{item}</li>)}
+            </ul>
+            <div class="phil-content" set:html={pageContent} />
+        </div>
+    </Main>
+</Layout>
+
+<style>
+    .phil-content p {
+        @apply mb-4;
+    }
+    .phil-list-item {
+        @apply my-2 even:list-image-leafLight odd:list-image-leafDark;
+    }
+</style>

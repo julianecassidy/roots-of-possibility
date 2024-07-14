@@ -46,4 +46,7 @@ export type ServiceCard = {
   title: string;
   description: string;
   buttonLink: string;
+  bgColor: "bg-base-100" | "bg-secondary";
+  textColor: "text-neutral" | "text-base-100";
+  buttonColor: "primary" | "secondary";
 }

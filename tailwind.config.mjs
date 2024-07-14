@@ -20,7 +20,8 @@ export default {
         mono: ["IBM Plex Mono", "monospace"],
       },
       listStyleImage: {
-        leaf: "url('leaf-light.svg')",
+        leafLight: "url('leaf-light.svg')",
+        leafDark: "url('leaf-dark.svg')",
       }
     },
   },
