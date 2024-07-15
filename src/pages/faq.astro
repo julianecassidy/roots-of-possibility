@@ -1,0 +1,93 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import type { TitleStyles } from "types";
+
+const pageTitle: TitleStyles[] = [
+    { text: "Frequently", style: "serif" },
+    { text: "Asked", style: "display" },
+    { text: "Questions", style: "serif" },
+];
+const pageDesc =
+    "Lorem ipsum dolor sit amet consectetur. Ultrices dolor feugiat sed sed ullamcorper vel egestas et. Volutpat amet in fermentum hac.";
+const faqs = [
+    {
+        q: "Do you offer in-person appointments?",
+        a: "Yes! I have an in-person office space in Littleton, Colorado, off of Wadsworth & Bowles. Be sure to discuss with me whether you’d like to meet virtually or in person, as well as whether you’re interested in animal-assisted therapy, when setting up your first appointment.",
+    },
+    {
+        q: "What sort of conditions do you treat?",
+        a: "I have worked with a vast array of diagnoses across the lifespan. My specialties include mood disorders, anxiety disorders, trauma, and life transitions, particularly for children & youth, teens, and young adults. I am also a neurodivergent-affirming and LGBTQIA-affirming therapist. I am also experienced in working with disabled, gifted, and twice-exceptional (2E) individuals.",
+    },
+    {
+        q: "What insurances do you accept?",
+        a: "I am currently in-network with and accepting clients using Aetna, Medicaid (Colorado Access and CHP+ plans), and <a href='https://thesecondwindfund.org/'  target='_blank' rel='noopener noreferrer'>Second Wind Fund</a>. I also accept Cigna and Anthem Blue Cross Blue Shield on a limited basis.",
+    },
+    {
+        q: "What is your availability?",
+        a: "While my specific availability varies, I generally see clients between 9am-2pm Monday-Thursday, and 9am-5pm on Fridays.",
+    },
+    {
+        q: "What is your cancellation and late policy?",
+        a: "I require 24 hours notice for cancellation or rescheduling; failure to provide 24 hours notice may result in you being charged the full session rate. In addition, being more than 10 minutes late to a session without communicating with me will generally be considered a no-show, and may also result in a fee. In general, being late to a session also means you will not make up the extra time; since a time is held specifically for you, and I may have appointments before and/or after yours, I am usually not able to see you past the scheduled session end time.",
+    },
+    {
+        q: "What can I expect on our initial phone call?",
+        a: "A “phone screen” or initial call is designed to let us get to know each other on a basic level to decide whether or not we’d be a good fit in working together. You can expect to get to know a little bit more about me, get a feel for my style, and be asked some basic questions. You’ll also get the opportunity to ask your own questions. If we choose to move forward, this phone call is often where we set up a first appointment and I will go over the intake forms you’ll be receiving via email prior to your session.",
+    },
+    {
+        q: "How much do sessions cost?",
+        a: "A typical 50-minute session costs $165. If you are using insurance, your copay will depend on your coverage; please inquire with your insurance provider prior to scheduling a session. The same applies to reimbursement rates if you plan to use out-of-network benefits. <em>*Shorter sessions are available at a prorated cost, mainly for younger clients who may struggle with long-form telehealth talk-therapy. Please contact me if you have specific questions, or consult the Good Faith Estimate (GFE) provided to you at the start of services.</em>",
+    },
+    {
+        q: "How long will I be in therapy?",
+        a: "Therapy is meant to be fully customized to every individual and their unique needs. For this reason, the decision about length or duration of treatment is built off of a discussion between clinician and client. Some younger clients adjusting to a more minor life change may only need 12 sessions, whereas a typical person should expect to be seen weekly for a year or more. While working together, you can expect me to maintain an open and ongoing dialogue about your expectations, progress, goals, and eventual conclusion of treatment.",
+    },
+    {
+        q: "What does it mean to be “neurodiversity-affirming?”",
+        a: "Being neurodiversity-affirming means that when I work with someone who has ADD, ADHD, or is on the Autism Spectrum (ASD), I see that as a part of who you are that should be embraced and worked <em>with</em>, not against. ",
+    },
+    {
+        q: "What’s with all this intake paperwork?",
+        a: "I know the number of forms you may be asked to fill out before beginning services with me (or any therapist!) can be overwhelming. I’ve put together a <a href='IntakeFormOutline.pdf' target='_blank' rel='noopener noreferrer'>one-page guide</a> with some of the most common components of intake paperwork laid out in simple terms. Please reach out to me if you have any specific questions; I would be more than happy to explain further!",
+    },
+];
+---
+
+<Layout title="Roots of Possibility | Philosophy & Beliefs">
+    <Main>
+        <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+        <div class="mx-4 sm:mx-8 md:mx-16 lg:mx-48 2xl:mx-64g">
+            <ul>
+                {
+                    faqs.map((faq) => (
+                        <li class="even:list-image-leafLight odd:list-image-leafDark">
+                            <div>
+                                <p class="text-2xl">
+                                    <span class="font-display text-xl">Q:</span>
+                                    {faq.q}
+                                </p>
+                                <p class="text-xl">
+                                    <span class="font-display text-xl">A:</span>
+                                    <span set:html={faq.a} />
+                                </p>
+                                <svg
+                                    class="w-full mx-auto my-8"
+                                    viewBox="0 0 1054 21"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M1 10.9788C44.8333 -2.32626 88.6667 -2.32626 132.5 10.9788C167.367 18.8408 211.201 18.8408 264 10.9788C307.833 3.11671 351.667 3.11671 395.5 10.9788C438.397 18.5049 482.23 18.5049 527 10.9788C570.833 3.4527 614.667 3.4527 658.5 10.9788C711.139 21.5287 754.973 21.5287 790 10.9788C833.833 0.428824 877.667 0.428824 921.5 10.9788C968.404 23.0071 1012.24 23.0071 1053 10.9788"
+                                        stroke="#A3B18A"
+                                        stroke-width="2"
+                                    />
+                                </svg>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </Main>
+</Layout>
