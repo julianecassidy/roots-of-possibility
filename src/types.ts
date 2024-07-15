@@ -40,13 +40,16 @@ export type TitleStyles = {
   style: "serif" | "display";
 };
 
-export type ServiceCard = {
+export type Service = {
   imagePath: string;
   altText: string;
   title: string;
   description: string;
   buttonLink: string;
-  bgColor: "bg-base-100" | "bg-secondary";
+}
+
+export interface ServiceCard extends Service {
+  bgColor: "bg-base-100" | "bg-secondary" | "bg-accent" | "bg-[#D0D7C4]";
   textColor: "text-neutral" | "text-base-100";
   buttonColor: "primary" | "secondary";
 }

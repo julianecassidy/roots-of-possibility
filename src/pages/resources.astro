@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import type { TitleStyles } from "types";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import { RESOURCES } from "@config";
+import leaves from "@assets/florals/leaves-white.png";
+
+const pageTitle: TitleStyles[] = [{ text: "Resources", style: "serif" }];
+const pageDesc =
+    "Lorem ipsum dolor sit amet consectetur. Ultrices dolor feugiat sed sed ullamcorper vel egestas et. Volutpat amet in fermentum hac.";
+---
+
+<Layout title="Roots of Possibility | Resources">
+    <Main>
+        <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+        <div
+            class="font-serif underline text-3xl text-center flex justify-center items-center mx-2"
+        >
+            <svg
+                class="mr-1 sm:mr-3"
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M4.44893 17.009C-0.246384 7.83762 7.34051 0.686125 19.5546 3.61245C20.416 3.81881 21.0081 4.60984 20.965 5.49452C20.5862 13.288 17.0341 17.7048 6.13252 17.9857C5.43022 18.0038 4.76908 17.6344 4.44893 17.009Z"
+                    stroke="#3A5A40"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path
+                    d="M3.99999 21C5.50005 15.5 6 12.5 12 9.99997"
+                    stroke="#3A5A40"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+            In case of emergency, please call 911
+            <svg
+                class="ml-1 sm:ml-3"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M24.4388 21.2613C30.308 9.79703 20.8244 0.857656 5.55674 4.51556C4.47999 4.77351 3.73987 5.7623 3.79374 6.86815C4.26724 16.61 8.70737 22.131 22.3343 22.4821C23.2122 22.5048 24.0386 22.043 24.4388 21.2613Z"
+                    stroke="#588157"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path
+                    d="M25 26.25C23.1249 19.375 22.5 15.625 15 12.5"
+                    stroke="#588157"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <div class="p-4 md:px-8 xl:px-10 2xl:px-48 relative overflow-hidden">
+            <Image
+                src={leaves}
+                alt="drawing of leaves on branch"
+                class="w-96 absolute z-20 opacity-100 rotate-45 -top-24 left-72"
+            />
+            <div
+                class="flex flex-wrap justify-center gap-8 xl:gap-16 relative z-20 mt-12"
+            >
+                {
+                    RESOURCES.map((resource) => (
+                        <ServiceCard
+                            title={resource.title}
+                            description={resource.description}
+                            buttonLink={resource.buttonLink}
+                            imagePath={resource.imagePath}
+                            altText={resource.altText}
+                            bgColor="bg-[#D0D7C4]"
+                            textColor="text-neutral"
+                            buttonColor="primary"
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </Main>
+</Layout>
