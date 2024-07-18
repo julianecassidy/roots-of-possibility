@@ -52,4 +52,5 @@ export interface ServiceCard extends Service {
   bgColor: "bg-base-100" | "bg-secondary" | "bg-accent" | "bg-[#D0D7C4]";
   textColor: "text-neutral" | "text-base-100";
   buttonColor: "primary" | "secondary";
+  buttonText: "Learn More" | "Get Resource";
 }
