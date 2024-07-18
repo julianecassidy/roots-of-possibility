@@ -15,12 +15,12 @@ const pageTitle: TitleStyles[] = [
     { text: "Services", style: "display" },
 ];
 const pageDesc =
-    "Lorem ipsum dolor sit amet consectetur. Ultrices dolor feugiat sed sed ullamcorper vel egestas et. Volutpat amet in fermentum hac.";
+    "Learn about our tailored services aimed at honoring the strengths and meeting the unique requirements of every individual.";
 const image1AltText = "image1 alt text";
 const image2AltText = "image2 alt text";
-const servicesTitle = "A Title About Services";
+const servicesTitle = "Individualized Approaches to Suit Your Needs";
 const servicesContent =
-    "Lorem ipsum dolor sit amet consectetur. Neque maecenas venenatis donec id non vel dignissim amet nec. Amet ut gravida nunc malesuada. Dolor magnis et id a ultrices eleifend aliquam purus rutrum. Quis consequat aliquet eu fermentum posuere. Eu faucibus imperdiet risus tellus velit. Ultrices id tellus tristique purus sit quis fermentum ultricies convallis. Pharetra nunc laoreet in condimentum dolor et ultrices leo ultrices. Massa diam urna proin non commodo nec vel tristique. Amet egestas facilisi purus diam fermentum adipiscing nunc non nunc. Faucibus elementum id viverra urna eu at. Lectus adipiscing lorem massa suspendisse non arcu eu ut. Fringilla amet lacus lectus nunc purus. Odio hendrerit eu et volutpat justo ut.";
+    "Roots of Possibility offers comprehensive therapy services, including specialized care for children, adolescents, and young adults. We provide expert support for trauma, self-harm, and attachment issues, with a dedicated focus on LGBTQIA+ and neurodiverse populations. Our compassionate human-animal team is here to help you and your loved ones achieve emotional well-being and personal growth.";
 const listItems = [
     "Dialectical Behavioral Therapy (DBT) - pursuing a “life worth living” by learning to tolerate distress, reducing maladaptive (unhealthy) coping skills by building adaptive (healthy) strategies to manage emotions and behaviors. DBT also has a strong foundation in self-respect and boundary cultivation.",
     "Acceptance and Commitment Therapy (ACT) - based on the idea of creating a meaningful and enjoyable life, and working through inevitable hard times and struggles, while grounding in our values and self-compassion.",
@@ -51,7 +51,7 @@ const listItems = [
                 </div>
                 <div class="w-full lg:w-2/3">
                     <h2 class="text-center my-8">{servicesTitle}</h2>
-                    <div set:html={servicesContent} />
+                    <p set:html={servicesContent} />
                 </div>
             </div>
         </GreenWavyBlock>

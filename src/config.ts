@@ -51,48 +51,48 @@ export const MENTALHEALTHMATCH: SocialObject = {
 
 const CHILDREN: Service = {
   title: "Therapy for Children",
-  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-  buttonLink: "/children",
+  description: "In-person, animal-assisted, and online (teletherapy) for children 6 and up.",
+  buttonLink: "/services/children",
   imagePath: "/indy.jpg",
   altText: "drawn red rose",
 };
 
 const ADOLESCENTS: Service = {
-  title: "Therapy for Children",
-  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-  buttonLink: "/children",
+  title: "Therapy for Adolescents",
+  description: "In-person, animal-assisted, and teletherapy for ages 10-18",
+  buttonLink: "/services/adolescents",
   imagePath: "/indy.jpg",
   altText: "drawn red rose",
 };
 
 const YOUNG_ADULTS: Service = {
-  title: "Therapy for Children",
-  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-  buttonLink: "/children",
+  title: "Therapy for Young Adults",
+  description: "In-person, animal-assisted, and telehealth therapy for those 19 to 30 years old.",
+  buttonLink: "/services/young-adults",
   imagePath: "/indy.jpg",
   altText: "drawn red rose",
 };
 
 const TRAUMA: Service = {
-  title: "Therapy for Children",
-  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-  buttonLink: "/children",
+  title: "Therapy for Trauma",
+  description: "Specialized services for those looking to process and recover from past or recent trauma.",
+  buttonLink: "/services/trauma",
   imagePath: "/indy.jpg",
   altText: "drawn red rose",
 };
 
 const SELF_HARM: Service = {
-  title: "Therapy for Children",
-  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-  buttonLink: "/children",
+  title: "Therapy for Self Harm",
+  description: "Experienced care for anyone struggling with self-injury and other self-destructive behaviors.",
+  buttonLink: "/services/self-harm",
   imagePath: "/indy.jpg",
   altText: "drawn red rose",
 };
 
 const ATTACHMENT: Service = {
-  title: "Therapy for Children",
-  description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-  buttonLink: "/children",
+  title: "Therapy for Attachment",
+  description: "Focused intervention and support for early-life and childhood attachment concerns, including related trauma, mood disturbances, or behavioral struggles.",
+  buttonLink: "/services/attachment",
   imagePath: "/indy.jpg",
   altText: "drawn red rose",
 };
