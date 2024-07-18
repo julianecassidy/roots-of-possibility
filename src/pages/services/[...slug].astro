@@ -1,0 +1,46 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import ServiceMD from "@components/ServiceMD.astro";
+import Services from "@components/homepage/Services.astro";
+
+export interface Props {
+    service: CollectionEntry<"services">;
+}
+
+export async function getStaticPaths() {
+  const services = await getCollection("services");
+
+  const servicesResults = services.map(service => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+
+  return [...servicesResults];
+}
+
+const { slug } = Astro.params;
+const { service } = Astro.props;
+const { Content } = await service.render();
+
+const pageTitle = service.data.styledTitle;
+const pageDesc = service.data.description;
+
+---
+
+<Layout title={`Roots of Possibility | ${service.data.title}`}`>
+  <Main>
+      <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+      <div class="mx-4 sm:mx-8 md:mx-16 lg:mx-48 2xl:mx-64 mb-8">
+        <ServiceMD>
+          <Content />
+        </ServiceMD>
+      </div>
+    </Main>
+</Layout>
+
+<style>
+
+</style>

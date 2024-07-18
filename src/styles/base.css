@@ -48,7 +48,7 @@
   }
 
   ol {
-    @apply list-decimal pl-12 font-sans font-light;
+    @apply list-decimal font-sans font-light text-lg;
   }
 
   small {

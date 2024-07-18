@@ -37,7 +37,7 @@ export type Tag = {
 
 export type TitleStyles = {
   text: string;
-  style: "serif" | "display";
+  style: string;
 };
 
 export type Service = {

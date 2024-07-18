@@ -10,7 +10,7 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img src="./logo.png" alt="roots of possiblity logo" class="w-24" />
+          <img src="/logo.png" alt="roots of possiblity logo" class="w-24" />
         ) : (
           SITE.title
         )
@@ -56,9 +56,9 @@ import Button from "@layouts/Button.astro";
   <div class="mobile-menu">
     <ul class="mobile-menu-main-list">
       <a href="/about"><li>About</li></a>
-      <div class="flex justify-between pt-2.5 -mb-3.5">
-        <a href="/services">Services</a>
+      <div class="flex justify-between pt-2.5 -mb-3.5 collapse">
         <div class="collapse">
+        <a href="/services">Services</a>
           <input type="checkbox" />
           <div class="collapse-title p-0">
             <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
