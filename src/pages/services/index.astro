@@ -6,7 +6,7 @@ import Header from "@layouts/Header.astro";
 import type { TitleStyles } from "types";
 import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
 import { SERVICES } from "@config";
-import ServiceCard from "@components/Card.astro";
+import Card from "@components/Card.astro";
 import image1 from "@assets/indy.jpg";
 import image2 from "@assets/octo.png";
 
@@ -60,7 +60,7 @@ const listItems = [
         >
             {
                 SERVICES.map((service) => (
-                    <ServiceCard
+                    <Card
                         title={service.title}
                         description={service.description}
                         buttonLink={service.buttonLink}

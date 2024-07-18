@@ -48,7 +48,7 @@ export type Service = {
   buttonLink: string;
 }
 
-export interface ServiceCard extends Service {
+export interface Card extends Service {
   bgColor: "bg-base-100" | "bg-secondary" | "bg-accent" | "bg-[#D0D7C4]";
   textColor: "text-neutral" | "text-base-100";
   buttonColor: "primary" | "secondary";

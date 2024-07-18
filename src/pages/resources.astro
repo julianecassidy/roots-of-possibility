@@ -4,7 +4,7 @@ import type { TitleStyles } from "types";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@layouts/Header.astro";
-import ServiceCard from "@components/Card.astro";
+import Card from "@components/Card.astro";
 import { RESOURCES } from "@config";
 import leaves from "@assets/florals/leaves-white.png";
 
@@ -74,7 +74,7 @@ const pageDesc =
             >
                 {
                     RESOURCES.map((resource) => (
-                        <ServiceCard
+                        <Card
                             title={resource.title}
                             description={resource.description}
                             buttonLink={resource.buttonLink}
