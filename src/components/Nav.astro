@@ -56,9 +56,9 @@ import Button from "@layouts/Button.astro";
   <div class="mobile-menu">
     <ul class="mobile-menu-main-list">
       <a href="/about"><li>About</li></a>
-      <div class="flex justify-between pt-2.5 -mb-3.5 collapse">
+      <div class="pt-2.5 -mb-3.5 flex">
+        <a href="/services">Services</a>
         <div class="collapse">
-          <a href="/services">Services</a>
           <input type="checkbox" />
           <div class="collapse-title p-0">
             <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
@@ -71,8 +71,8 @@ import Button from "@layouts/Button.astro";
               </path>
             </svg>
           </div>
-          <div class="collapse-content">
-            <ul class="nav-list pl-4">
+          <div class="collapse-content pl-0">
+            <ul class="flex flex-col">
               <a href="/services/children"><li>Children</li></a>
               <a href="/services/adolescents"><li>Adolescents</li></a>
               <a href="/services/young-adults"><li>Young Adults</li></a>
@@ -179,7 +179,6 @@ import Button from "@layouts/Button.astro";
   .mobile-menu-main-list {
     @apply list-none mb-4 px-24;
   }
-
   .mobile-menu a {
     @apply text-neutral text-2xl;
   }
