@@ -1,11 +1,11 @@
-function withOpacity(variableName) {
-  return ({ opacityValue } ) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`;
-    }
-    return `rgb(var(${variableName}))`;
-  };
-}
+// function withOpacity(variableName) {
+//   return ({ opacityValue } ) => {
+//     if (opacityValue !== undefined) {
+//       return `rgba(var(${variableName}), ${opacityValue})`;
+//     }
+//     return `rgb(var(${variableName}))`;
+//   };
+// }
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -20,8 +20,8 @@ export default {
         mono: ["IBM Plex Mono", "monospace"],
       },
       listStyleImage: {
-        leafLight: "url('leaf-light.svg')",
-        leafDark: "url('leaf-dark.svg')",
+        leafLight: "url('/listImages/leaf-light.svg')",
+        leafDark: "url('/listImages/leaf-dark.svg')",
       }
     },
   },
