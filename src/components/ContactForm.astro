@@ -9,6 +9,7 @@
             <input
                 id="name"
                 type="text"
+                name="name"
                 placeholder="Please enter your name"
                 required
             />
@@ -18,6 +19,7 @@
             <input
                 id="pronouns"
                 type="text"
+                name="pronouns"
                 placeholder="How should I refer to you?"
             />
         </label>
@@ -26,17 +28,18 @@
             <input
                 id="email"
                 type="email"
+                name="email"
                 placeholder="email@site.com"
                 required
             />
         </label>
         <label for="phone" class="form-control w-full">
-            <span class="form-label">Phone</span>
-            <input id="phone" type="tel" placeholder="555-555-5555" required />
+            <span class="form-label">Phone *</span>
+            <input id="phone" type="tel" name="telephone" placeholder="555-555-5555" required />
         </label>
         <label for="contact-method" class="form-control w-full lg:w-5/12">
             <span class="form-label">How do you prefer to be contacted?</span>
-            <select id="contact-method">
+            <select id="contact-method" name="contact-method">
                 <option value="email">Email</option>
                 <option value="phone">Phone</option>
             </select>
@@ -45,14 +48,14 @@
             <span class="form-label"
                 >Are you interested in therapy for yourself or your child?</span
             >
-            <select id="parent">
+            <select id="parent" name="parent-or-child">
                 <option value="email">Myself</option>
                 <option value="phone">My Child</option>
             </select>
         </label>
         <label for="message" class="form-control w-full">
-            <span class="form-label">Message*</span>
-            <textarea id="message" rows="5" required></textarea>
+            <span class="form-label">Message *</span>
+            <textarea id="message" class="message" rows="5" required></textarea>
         </label>
         <p class="hidden">
             <label>
