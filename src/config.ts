@@ -30,7 +30,7 @@ export const PSYCHOLOGYTODAY: SocialObject = {
 
 export const INSTAGRAM: SocialObject = {
     name: "Instagram",
-    href: "https://www.psychologytoday.com/us/therapists/julia-kuttler-boulder-co/1293002",
+    href: "https://www.instagram.com/rootsofpossibility/",
     linkTitle: `Julia on Instagram`,
     active: true,
 };
