@@ -196,7 +196,6 @@ import Button from "@layouts/Button.astro";
 
 <script>
   function toggleNav() {
-    console.log("toggleNav runs");
     // Toggle menu
     const open = document.querySelector(
       "input[type=checkbox]",
@@ -206,12 +205,8 @@ import Button from "@layouts/Button.astro";
     ) as HTMLLabelElement;
     const menuItems = document.querySelector(".mobile-menu") as HTMLDivElement;
 
-    console.log({ menuBtn, open });
-
     open.addEventListener("change", () => {
-      console.log("callback runs");
       const menuExpanded = open.checked;
-      console.log(menuExpanded);
       menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
       menuBtn.setAttribute(
         "aria-label",
