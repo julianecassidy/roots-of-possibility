@@ -5,10 +5,10 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@layouts/Header.astro";
 import SinglePhotoBlock from "@components/SinglePhotoBlock.astro";
-import julia from "@assets/indy.jpg";
-import dottie1 from "@assets/indy.jpg";
-import dottie2 from "@assets/indy.jpg";
-import florals from "@assets/florals/leaves-1.png";
+import julia from "@assets/julia.jpg";
+import dottie1 from "@assets/dottie1.jpg";
+import dottie2 from "@assets/dottiedraw.png";
+import florals from "@assets/florals/leaves-3.png";
 import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
 
 const pageTitle: TitleStyles[] = [
@@ -81,7 +81,7 @@ const backgroudText = `
                     <Image
                         src={dottie2}
                         alt={aboutDottieAltText}
-                        class="w-1/2 border border-none rounded-xl absolute z-20 -bottom-12 -right-12 lg:-top-12 lg:-left-12"
+                        class="w-1/2 border border-none rounded-xl absolute z-20 -bottom-12 -right-12 lg:bottom-0 lg:right-0 lg:-top-16 lg:-left-24"
                     />
                 </div>
             </div>
@@ -90,7 +90,7 @@ const backgroudText = `
             <Image
                 src={florals}
                 alt="drawing of leaves"
-                class="hidden lg:block opacity-20 w-1/4"
+                class="hidden lg:block opacity-20 w-2/12"
             />
             <div class="w-full lg:w-3/4">
                 <h2 class="text-center mb-8">{backgroundTitle}</h2>

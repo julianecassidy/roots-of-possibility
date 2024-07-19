@@ -7,8 +7,8 @@ import type { TitleStyles } from "types";
 import GreenWavyBlock from "@layouts/GreenWavyBlock.astro";
 import { SERVICES } from "@config";
 import Card from "@components/Card.astro";
-import image1 from "@assets/indy.jpg";
-import image2 from "@assets/octo.png";
+import dottieJulia from "@assets/dottie-julia-indoors.jpeg";
+import flower from "@assets/flowers/orchids.jpg";
 
 const pageTitle: TitleStyles[] = [
     { text: "Therapy", style: "serif" },
@@ -16,8 +16,8 @@ const pageTitle: TitleStyles[] = [
 ];
 const pageDesc =
     "Learn about our tailored services aimed at honoring the strengths and meeting the unique requirements of every individual.";
-const image1AltText = "image1 alt text";
-const image2AltText = "image2 alt text";
+const dottieJuliaAltText = "julia and dottie seated on a sofa";
+const flowerAltText = "drawing of yellow and blue orchids";
 const servicesTitle = "Individualized Approaches to Suit Your Needs";
 const servicesContent =
     "Roots of Possibility offers comprehensive therapy services, including specialized care for children, adolescents, and young adults. We provide expert support for trauma, self-harm, and attachment issues, with a dedicated focus on LGBTQIA+ and neurodiverse populations. Our compassionate human-animal team is here to help you and your loved ones achieve emotional well-being and personal growth.";
@@ -37,16 +37,16 @@ const listItems = [
             <div
                 class="flex flex-col-reverse lg:flex-row items-center justify-center gap-x-16 gap-y-8 p-4 sm:px-16 xl:px-32 2xl:px-64 overflow-hidden"
             >
-                <div class="w-1/2 lg:w-1/4 relative mt-12">
+                <div class="w-1/2 relative mt-20">
                     <Image
-                        src={image1}
-                        alt={image1AltText}
-                        class="border border-none rounded-2xl relative z-10"
+                        src={dottieJulia}
+                        alt={dottieJuliaAltText}
+                        class="border border-none rounded-2xl relative z-20"
                     />
                     <Image
-                        src={image2}
-                        alt={image2AltText}
-                        class="w-1/2 border border-none rounded-xl absolute z-20 -bottom-12 -right-12 lg:-top-12 lg:-left-12"
+                        src={flower}
+                        alt={flowerAltText}
+                        class="w-1/2 border border-none rounded-xl absolute z-10 -bottom-12 -right-12 lg:bottom-0 lg:right-0 lg:-top-20 lg:-left-20"
                     />
                 </div>
                 <div class="w-full lg:w-2/3">
