@@ -2,10 +2,8 @@
 title: Animal Assisted Therapy
 styledTitle: [{"text": "Animal", "style": "serif"}, {"text": "Assisted", "style": "display"}, {"text": "Therapy", "style": "serif"}, ]
 slug: "animal-assisted"
-description: "AstroPaper v4: ensuring a smoother and more feature-rich blogging experience."
+description: ""
 ---
-
-## Lorem Ipsum Some Title Here
 
 Meet my furry co-therapist, Dottie Lou! Dottie is a 3 year old bulldog mix rescued from Texas. From day one I knew she had the personality that would suit therapy, having previously worked with another canine partner, my late dog Petey, in Denver middle schools. Dottie Lou is people-centric, loving, and intuitive, and she is especially wonderful with children.
 

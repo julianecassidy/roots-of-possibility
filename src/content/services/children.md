@@ -2,10 +2,8 @@
 title: Therapy for Children
 styledTitle: [{"text": "Therapy for", "style": "serif"}, {"text": "Children", "style": "display"},]
 slug: "children"
-description: "AstroPaper v4: ensuring a smoother and more feature-rich blogging experience."
+description: ""
 ---
-
-## Lorem Ipsum Some Title Here
 
 While accounting for individual preferences and developmental appropriateness, I love to incorporate art and other creative activities to keep younger kids engaged and drive self-reflection while building emotional vocabulary. I also integrate bibliotherapy - where your child and I can learn and expand on skills via storytelling and imagination.
 
@@ -22,6 +20,6 @@ For the majority of the therapeutic process, your child and I will meet (virtual
 
 From time to time, I will ask guardians to join the child client and I for a session (in whole or in part), particularly if there are specific issues that need to be addressed such as communication. As the parent/guardian, you are also always welcome to bring things to my attention, either confidentially or as a “team,” that you feel are important for me to know or that need to be attended to.
 
-## Lorem Ipsum Some Title Here
+## My Style for Children's Therapy
 
 While accounting for individual preferences and developmental appropriateness, I love to incorporate art and other creative activities to keep younger kids engaged and drive self-reflection while building emotional vocabulary. I also integrate bibliotherapy - where your child and I can learn and expand on skills via storytelling and imagination.

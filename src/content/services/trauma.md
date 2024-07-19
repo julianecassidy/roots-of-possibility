@@ -2,10 +2,8 @@
 title: Therapy for Trauma
 styledTitle: [{"text": "Therapy for", "style": "serif"}, {"text": "Trauma", "style": "display"},]
 slug: "trauma"
-description: "AstroPaper v4: ensuring a smoother and more feature-rich blogging experience."
+description: ""
 ---
-
-## Lorem Ipsum Some Title Here
 
 Childhood trauma can present immense challenges for both the individual and their caregivers, whether manifesting as behavioral changes, dramatic shifts in mood, or over-reliance on unhealthy coping mechanisms such as substance use or self-harm. Sometimes, depending on the age at which trauma took place, we may not even be aware of the underlying experiences influencing and shaping our understanding of, and approach to, the world.
 
@@ -13,7 +11,7 @@ Our trauma therapy services are designed to provide a safe and supportive enviro
 
 For children and youth with attachment trauma in particular, animal-assisted interventions with canine co-therapist Dottie Lou may provide particular benefits, including co-regulation – the process by which the presence and interaction with an animal help a person regulate their emotional and physiological state.
 
-Take the first step towards reclaiming your resilience and well-being by scheduling a consultation today.
+Take the first step towards reclaiming your resilience and well-being by [scheduling a consultation](https://rootsofpossibility.com/contact) today.
 
 ### EMDR
 RoP does not offer EMDR at this time, and yet we still specialize in helping people – particularly youth – who have experienced trauma. Contrary to popular media depictions, EMDR is not synonymous with trauma therapy – because no approach is one-size-fits-all.

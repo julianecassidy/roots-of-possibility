@@ -2,7 +2,7 @@
 title: Therapy for Adolescents
 styledTitle: [{"text": "Therapy for", "style": "serif"}, {"text": "Adolescents", "style": "display"},]
 slug: "adolescents"
-description: "AstroPaper v4: ensuring a smoother and more feature-rich blogging experience."
+description: ""
 ---
 
 ## About Therapy
