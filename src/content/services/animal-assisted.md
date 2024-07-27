@@ -11,15 +11,15 @@ Dottie Lou has been a registered therapy dog through Professional Therapy Dogs o
 
 Dottie worked alongside me for one school year at Littleton High School before taking a hiatus to have some knee surgeries – and while at LHS, she was beloved, being featured in the student newspaper The Lions Roar, and even getting her own two-page spread in the 23-24 yearbook!
 
-Therapy animals such as Dottie can provide a wealth of benefits to both clinician and client. Therapy animals have been found to:
-Decrease stress, including reduced cortisol, blood pressure & heart rate
-Help increase self-esteem
-Lessen feelings of loneliness
-Provide comfort to aid in alleviating anxiety and depression symptoms
-Enhance the development of a non-judgmental safe space to better conduct therapy
-
-(Koukourikos, K. et. al. (2019). Benefits of animal assisted therapy in mental health. International Journal of Caring Sciences, 12(3), 1898. Retrieved from https://internationaljournalofcaringsciences.org/docs/64_koukorikos_review_12_3.pdf)
+Therapy animals such as Dottie can provide a wealth of benefits to both clinician and client. Therapy animals have been found to<sup>1</sup>:
+- Decrease stress, including reduced cortisol, blood pressure & heart rate
+- Help increase self-esteem
+- Lessen feelings of loneliness
+- Provide comfort to aid in alleviating anxiety and depression symptoms
+- Enhance the development of a non-judgmental safe space to better conduct therapy
 
 For children and youth with attachment trauma in particular, animal-assisted interventions with canine co-therapist Dottie Lou may provide extra relief by helping to establish a safe space rooted in unconditional love and acceptance.
 
 Check out Dottie’s Instagram at [@dottielou_therapydog](https://www.instagram.com/dottielou_therapydog/)!
+
+<sub><sup>1</sup> Koukourikos, K. et. al. (2019). Benefits of animal assisted therapy in mental health. International Journal of Caring Sciences, 12(3), 1898. Retrieved from https://internationaljournalofcaringsciences.org/docs/64_koukorikos_review_12_3.pdf</sub>
