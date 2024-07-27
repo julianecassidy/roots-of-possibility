@@ -14,7 +14,7 @@ The first time we meet for therapy, in order to get the best possible “whole p
 
 2. Therapy sessions
 
-For the majority of the therapeutic process, your child and I will meet (virtually) one on one. An adult always needs to be present in the home in case of emergency, however, the relationship between clinician and client will be most authentic if parents are not in the same room (although there are of course exceptions to this, and everything is decided on a case-by-case, revisitable basis).
+For the majority of the therapeutic process, your child and I will meet one on one. An adult always needs to be present in the home in case of emergency, however, the relationship between clinician and client will be most authentic if parents are not in the same room (although there are of course exceptions to this, and everything is decided on a case-by-case, revisitable basis).
 
 3. Periodic parent involvement
 
