@@ -31,7 +31,14 @@ export const PSYCHOLOGYTODAY: SocialObject = {
 export const INSTAGRAM: SocialObject = {
     name: "Instagram",
     href: "https://www.instagram.com/rootsofpossibility/",
-    linkTitle: `Julia on Instagram`,
+    linkTitle: `Roots of Possibility on Instagram`,
+    active: true,
+};
+
+export const LINKEDIN: SocialObject = {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/roots-of-possibility-pllc/",
+    linkTitle: `Roots of Possibility on LinkedIn`,
     active: true,
 };
 

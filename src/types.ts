@@ -18,7 +18,8 @@ export type SocialMedia =
   | "Psychology Today"
   | "Therapy Den"
   | "Mental Health Match"
-  | "Instagram";
+  | "Instagram"
+  | "LinkedIn";
 
 export type Post = {
   id: number;
