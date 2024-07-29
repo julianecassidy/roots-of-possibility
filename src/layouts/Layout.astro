@@ -64,10 +64,14 @@ const {
 			// include google-site-verification tag in the heading
 			// Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
 			googleSiteVerification && (
-			  <meta
-				name="google-site-verification"
-				content={googleSiteVerification}
-			  />
+			<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleSiteVerification}`}></script>
+			<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-WMS7VSR4L9');
+			</script>
 			)
 		  }
 	</head>
