@@ -66,7 +66,7 @@ const CHILDREN: Service = {
 
 const ADOLESCENTS: Service = {
   title: "Therapy for Adolescents",
-  description: "In-person, animal-assisted, and teletherapy for ages 10-18",
+  description: "In-person, animal-assisted, and teletherapy for ages 10-18.",
   buttonLink: "/services/adolescents",
   imagePath: "/flowers/narcissus.jpg",
   altText: "drawn yellow narcissus",

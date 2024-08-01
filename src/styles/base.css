@@ -84,8 +84,8 @@
 /* Fade in up animation */
 .fadein {
   opacity: 0;
-  transition: all 1.5s;
-  transform: translate(0, 100px);
+  transition: all 1.3s;
+  transform: translate(0, 75px);
 }
 
 .fadein.visible {
