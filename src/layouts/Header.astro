@@ -23,7 +23,7 @@ const pageTitle = pageTitleWords
     .join(" ");
 ---
 
-<div class="w-full md:w-2/3 mx-auto mt-20 mb-12 relative">
+<div class="fadeIn-onload w-full md:w-2/3 mx-auto mt-20 mb-12 relative">
     <Image
         src={leavesHeader}
         alt="drawing of leaves and dots"
@@ -38,3 +38,20 @@ const pageTitle = pageTitleWords
         }
     </div>
 </div>
+
+<style>
+    @keyframes fadeInUp {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    .fadeIn-onload {
+        animation: 1s fadeInUp;
+    }
+</style>

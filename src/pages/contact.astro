@@ -17,7 +17,7 @@ const pageDesc =
     <Main>
         <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
         <div class="p-4 sm:px-8 xl:px-10 2xl:px-48">
-            <div class="flex flex-col lg:flex-row justify-between gap-8 mb-8">
+            <div class="fadein flex flex-col lg:flex-row justify-between gap-8 mb-8">
                 <div
                     class="w-full lg:w-2/3 bg-secondary text-base-100 border border-none rounded-2xl py-8 px-8 flex flex-col items-center"
                 >
@@ -90,7 +90,7 @@ const pageDesc =
                 </div>
             </div>
             <div
-                class="w-full bg-primary text-base-100 flex flex-col md:flex-row justify-center items-center gap-4 px-8 py-8 mb-8 border border-none rounded-2xl"
+                class="fadein w-full bg-primary text-base-100 flex flex-col md:flex-row justify-center items-center gap-4 px-8 py-8 mb-8 border border-none rounded-2xl"
             >
                 <div class="w-full md:w-1/2">
                     <h3 class="text-center">Visit the Office</h3>
@@ -110,7 +110,7 @@ const pageDesc =
                     </p>
                 </div>
             </div>
-            <p>
+            <p class="fadein">
                 <em>
                     This website, and my contact information, is <b>not</b> to be
                     used in case of any mental health emergency. If you are in crisis,
@@ -120,14 +120,14 @@ const pageDesc =
                     “TALK” to 38255.
                 </em>
             </p>
-            <svg class="w-full mx-auto my-8" viewBox="0 0 1054 21" fill="none">
+            <svg class="fadein w-full mx-auto my-8" viewBox="0 0 1054 21" fill="none">
                 <path
                     d="M1 10.9788C44.8333 -2.32626 88.6667 -2.32626 132.5 10.9788C167.367 18.8408 211.201 18.8408 264 10.9788C307.833 3.11671 351.667 3.11671 395.5 10.9788C438.397 18.5049 482.23 18.5049 527 10.9788C570.833 3.4527 614.667 3.4527 658.5 10.9788C711.139 21.5287 754.973 21.5287 790 10.9788C833.833 0.428824 877.667 0.428824 921.5 10.9788C968.404 23.0071 1012.24 23.0071 1053 10.9788"
                     stroke="#A3B18A"
                     stroke-width="2"></path>
             </svg>
             <div
-                class="flex justify-center gap-8 p-4 sm:px-8 lg:px-24 2xl:px-56"
+                class="fadein flex justify-center gap-8 p-4 sm:px-8 lg:px-24 2xl:px-56"
             >
                 <Image
                     src={florals}
