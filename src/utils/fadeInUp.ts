@@ -1,7 +1,6 @@
 // fade in grid items  ==================================
 
 document.addEventListener("scroll", function () {
-  console.log("eventListener");
   const pageTop = scrollTop(document)
   const pageBottom = pageTop + window.innerHeight;
   const tags = document.querySelectorAll(".fadein");

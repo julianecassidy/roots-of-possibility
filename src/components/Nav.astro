@@ -10,7 +10,7 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img src="/logo.png" alt="roots of possiblity logo" class="w-24" />
+          <img src="/logo.png" alt="roots of possiblity logo" id="nav-bar-logo" class="w-24" />
         ) : (
           SITE.title
         )
@@ -89,7 +89,9 @@ import Button from "@layouts/Button.astro";
       <a href="/philosophy"><li>Philosophy</li></a>
       <a href="/resources"><li>Resources</li></a>
       <a href="/faq"><li>FAQ</li></a>
-      <a href="https://www.therapyportal.com/p/rootsofpossibility/"><li>Client Portal</li></a>
+      <a href="https://www.therapyportal.com/p/rootsofpossibility/"
+        ><li>Client Portal</li></a
+      >
     </ul>
     <div class="mobile-menu-contact">
       <Button color={"primary"} otherClasses={"w-3/4"} link="/contact">
@@ -123,7 +125,8 @@ import Button from "@layouts/Button.astro";
         >
           <a class="mb-4" href="/services/children"><li>Children</li></a>
           <a class="mb-4" href="/services/adolescents"><li>Adolescents</li></a>
-          <a class="mb-4" href="/services/young-adults"><li>Young Adults</li></a>
+          <a class="mb-4" href="/services/young-adults"><li>Young Adults</li></a
+          >
           <a class="mb-4" href="/services/animal-assisted"
             ><li>Animal Assisted Therapy</li></a
           >
@@ -192,6 +195,28 @@ import Button from "@layouts/Button.astro";
   #hamberger-menu input:checked ~ ul {
     transform: none;
   }
+
+  /* classes for sticky header */
+
+  .content {
+    padding: 16px;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #f6f6f3;
+    margin-top: -1.5rem;
+    z-index: 70;
+  }
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .sticky-logo {
+    @apply hidden;
+  }
 </style>
 
 <script>
@@ -221,4 +246,28 @@ import Button from "@layouts/Button.astro";
 
   // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
+
+  // Handle sticky nav
+  // When the user scrolls the page, execute stickNav
+  window.onscroll = function () {
+    stickNav();
+  };
+
+  // Get the navbar and logo
+  const navbar = document.querySelector(".nav-bar") as HTMLDivElement;
+  const logo = document.getElementById("nav-bar-logo") as HTMLImageElement;
+
+  // Get the offset position of the navbar
+  const sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function stickNav() {
+    if (window.scrollY >= sticky) {
+      navbar.classList.add("sticky");
+      logo.classList.add("sticky-logo");
+    } else {
+      navbar.classList.remove("sticky");
+      logo.classList.remove("sticky-logo");
+    }
+  }
 </script>
