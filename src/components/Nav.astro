@@ -17,6 +17,17 @@ import Button from "@layouts/Button.astro";
       }
     </a>
   </div>
+  <div class="sticky-logo">
+    <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
+      {
+        LOGO_IMAGE.enable ? (
+          <img src="/logo-small.png" alt="roots of possiblity logo" id="nav-bar-sticky-logo" class="w-16 hide-sticky-logo" />
+        ) : (
+          SITE.title
+        )
+      }
+    </a>
+  </div>
   <label
     id="hamburger-menu"
     class="md:hidden group swap swap-rotate ml-auto mr-12 z-40"
@@ -215,7 +226,19 @@ import Button from "@layouts/Button.astro";
   }
 
   .sticky-logo {
+    @apply absolute pt-8 w-3/4 sm:w-2/12 ml-1 ml-4 md:ml-12;
+  }
+
+  .hide-nav-logo {
     @apply hidden;
+  }
+
+  .hide-sticky-logo {
+    @apply hidden;
+  }
+
+  .show-sticky-logo {
+    @apply block;
   }
 </style>
 
@@ -250,12 +273,13 @@ import Button from "@layouts/Button.astro";
   // Handle sticky nav
   // When the user scrolls the page, execute stickNav
   window.onscroll = function () {
-    stickNav();
+    if (window.innerWidth >= 768) stickNav();
   };
 
   // Get the navbar and logo
   const navbar = document.querySelector(".nav-bar") as HTMLDivElement;
   const logo = document.getElementById("nav-bar-logo") as HTMLImageElement;
+  const stickyLogo = document.getElementById("nav-bar-sticky-logo") as HTMLImageElement;
 
   // Get the offset position of the navbar
   const sticky = navbar.offsetTop;
@@ -264,10 +288,14 @@ import Button from "@layouts/Button.astro";
   function stickNav() {
     if (window.scrollY >= sticky) {
       navbar.classList.add("sticky");
-      logo.classList.add("sticky-logo");
+      logo.classList.add("hide-nav-logo");
+      stickyLogo.classList.remove("hide-sticky-logo");
+      stickyLogo.classList.add("show-sticky-logo");
     } else {
       navbar.classList.remove("sticky");
-      logo.classList.remove("sticky-logo");
+      logo.classList.remove("hide-nav-logo");
+      stickyLogo.classList.remove("show-sticky-logo");
+      stickyLogo.classList.add("hide-sticky-logo");
     }
   }
 </script>
