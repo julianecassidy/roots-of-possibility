@@ -1,5 +1,6 @@
 ---
 import { LOGO_IMAGE, SITE } from "@config";
+import { Image } from "astro:assets";
 import AuxNav from "./AuxNav.astro";
 import Button from "@layouts/Button.astro";
 ---
@@ -10,7 +11,7 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img src="/logo.png" alt="roots of possiblity logo" id="nav-bar-logo" class="w-24" />
+          <img src="/logo.png" alt="roots of possiblity logo" id="nav-bar-logo" class="w-24" width="96px" />
         ) : (
           SITE.title
         )
@@ -21,7 +22,7 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img src="/logo-small.png" alt="roots of possiblity logo" id="nav-bar-sticky-logo" class="w-16 hide-sticky-logo" />
+          <img src="/logo-small.png" alt="roots of possiblity logo" id="nav-bar-sticky-logo" class="w-16 hide-sticky-logo" loading="lazy" />
         ) : (
           SITE.title
         )
