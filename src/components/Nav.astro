@@ -11,7 +11,13 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img src="/logo.png" alt="roots of possiblity logo" id="nav-bar-logo" class="w-24" width="96px" />
+          <img
+            src="/logo.png"
+            alt="roots of possiblity logo"
+            id="nav-bar-logo"
+            class="w-24"
+            width="96px"
+          />
         ) : (
           SITE.title
         )
@@ -22,7 +28,13 @@ import Button from "@layouts/Button.astro";
     <a href="/" class="logo whitespace-nowrap" title="home" aria-label="home">
       {
         LOGO_IMAGE.enable ? (
-          <img src="/logo-small.png" alt="roots of possiblity logo" id="nav-bar-sticky-logo" class="w-16 hide-sticky-logo" loading="lazy" />
+          <img
+            src="/logo-small.png"
+            alt="roots of possiblity logo"
+            id="nav-bar-sticky-logo"
+            class="w-16 hide-sticky-logo"
+            loading="lazy"
+          />
         ) : (
           SITE.title
         )
@@ -68,40 +80,46 @@ import Button from "@layouts/Button.astro";
   <div id="mobile-menu">
     <ul class="mobile-menu-main-list">
       <li><a href="/about">About</a></li>
-      <li><div class="pt-2.5 -mb-3.5 flex">
-        <a href="/services">Services</a>
-        <div class="collapse">
-          <input type="checkbox" />
-          <div class="collapse-title p-0">
-            <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
-                fill="#111D13"
-              >
-              </path>
-            </svg>
-          </div>
-          <div class="collapse-content pl-0">
-            <ul class="flex flex-col">
-              <li><a href="/services/children">Children</a></li>
-              <li><a href="/services/adolescents">Adolescents</a></li>
-              <li><a href="/services/young-adults">Young Adults</a></li>
-              <li><a href="/services/animal-assisted"
-                >Animal Assisted Therapy</a></li>
-              <li><a href="/services/trauma">Trauma Therapy</a></li>
-              <li><a href="/services/attachment">Attachment</a></li>
-              <li><a href="/services/self-harm">Self Harm</a></li>
-            </ul>
+      <li>
+        <div class="pt-2.5 -mb-3.5 flex">
+          <a href="/services">Services</a>
+          <div class="collapse">
+            <input type="checkbox" aria-label="services dropdown" />
+            <div class="collapse-title p-0">
+              <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.00003 8.5C6.59557 8.5 6.23093 8.74364 6.07615 9.11732C5.92137 9.49099 6.00692 9.92111 6.29292 10.2071L11.2929 15.2071C11.6834 15.5976 12.3166 15.5976 12.7071 15.2071L17.7071 10.2071C17.9931 9.92111 18.0787 9.49099 17.9239 9.11732C17.7691 8.74364 17.4045 8.5 17 8.5H7.00003Z"
+                  fill="#111D13"
+                >
+                </path>
+              </svg>
+            </div>
+            <div class="collapse-content pl-0">
+              <ul class="flex flex-col">
+                <li><a href="/services/children">Children</a></li>
+                <li><a href="/services/adolescents">Adolescents</a></li>
+                <li><a href="/services/young-adults">Young Adults</a></li>
+                <li>
+                  <a href="/services/animal-assisted"
+                    >Animal Assisted Therapy</a>
+                </li>
+                <li><a href="/services/trauma">Trauma Therapy</a></li>
+                <li><a href="/services/attachment">Attachment</a></li>
+                <li><a href="/services/self-harm">Self Harm</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div></li>
+      </li>
       <li><a href="/philosophy">Philosophy</a></li>
       <li><a href="/resources">Resources</a></li>
       <li><a href="/faq">FAQ</a></li>
-      <li><a href="https://www.therapyportal.com/p/rootsofpossibility/"
-        >Client Portal</a></li>
+      <li>
+        <a href="https://www.therapyportal.com/p/rootsofpossibility/"
+          >Client Portal</a>
+      </li>
     </ul>
     <div class="mobile-menu-contact">
       <Button color={"primary"} otherClasses={"w-3/4"} link="/contact">
@@ -112,10 +130,10 @@ import Button from "@layouts/Button.astro";
   <nav>
     <ul class="nav-list">
       <li><a href="/about">About</a></li>
+      <li>
       <div class="dropdown dropdown-hover">
-        <li>
-        <div tabindex="0" role="button">
-          <a href="/services" class="flex flex-nowrap">
+          <div tabindex="0" role="button">
+            <a href="/services" class="flex flex-nowrap">
               Services
               <span>
                 <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
@@ -128,24 +146,23 @@ import Button from "@layouts/Button.astro";
               </span>
             </a>
           </div>
-        </li>
         <ul
           tabindex="0"
           class="dropdown-content menu bg-accent rounded-box absolute z-30 w-52 pt-2 px-2 pb-3 shadow"
         >
-          <a class="mb-4" href="/services/children"><li>Children</li></a>
-          <a class="mb-4" href="/services/adolescents"><li>Adolescents</li></a>
-          <a class="mb-4" href="/services/young-adults"><li>Young Adults</li></a
-          >
-          <a class="mb-4" href="/services/animal-assisted"
-            ><li>Animal Assisted Therapy</li></a
-          >
-          <a class="mb-4" href="/services/trauma"><li>Trauma Therapy</li></a>
-          <a class="mb-4" href="/services/attachment"><li>Attachment</li></a>
-          <a class="mb-4" href="/services/self-harm"><li>Self Harm</li></a>
+          <li><a class="mb-4" href="/services/children">Children</a></li>
+          <li><a class="mb-4" href="/services/adolescents">Adolescents</a></li>
+          <li><a class="mb-4" href="/services/young-adults">Young Adults</a></li>
+          <li><a class="mb-4" href="/services/animal-assisted"
+            >Animal Assisted Therapy</a></li>
+          <li><a class="mb-4" href="/services/trauma">Trauma Therapy</a></li>
+          <li><a class="mb-4" href="/services/attachment">Attachment</a></li>
+          <li><a class="mb-4" href="/services/self-harm">Self Harm</a></li>
         </ul>
       </div>
-      <a href="/philosophy"><li>Philosophy</li></a>
+    </li>
+
+      <li><a href="/philosophy">Philosophy</a></li>
     </ul>
     <Button color="primary" link="/contact"> Contact </Button>
   </nav>
@@ -278,7 +295,9 @@ import Button from "@layouts/Button.astro";
   // Get the navbar and logo
   const navbar = document.querySelector(".nav-bar") as HTMLDivElement;
   const logo = document.getElementById("nav-bar-logo") as HTMLImageElement;
-  const stickyLogo = document.getElementById("nav-bar-sticky-logo") as HTMLImageElement;
+  const stickyLogo = document.getElementById(
+    "nav-bar-sticky-logo",
+  ) as HTMLImageElement;
 
   // Get the offset position of the navbar
   const sticky = navbar.offsetTop;
