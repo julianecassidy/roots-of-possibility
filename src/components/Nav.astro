@@ -29,14 +29,14 @@ import Button from "@layouts/Button.astro";
     </a>
   </div>
   <label
-    id="hamburger-menu"
+    for="hamburger-menu"
     class="md:hidden group swap swap-rotate ml-auto mr-12 z-40"
     aria-label="Open Menu"
     aria-expanded="false"
     aria-controls="mobile-menu"
   >
     <!-- this hidden checkbox controls the state -->
-    <input type="checkbox" />
+    <input type="checkbox" id="hamburger-menu" />
 
     <!-- hamburger icon -->
     <svg
@@ -64,10 +64,10 @@ import Button from "@layouts/Button.astro";
       ></polygon>
     </svg>
   </label>
-  <div class="mobile-menu">
+  <div id="mobile-menu">
     <ul class="mobile-menu-main-list">
-      <a href="/about"><li>About</li></a>
-      <div class="pt-2.5 -mb-3.5 flex">
+      <li><a href="/about">About</a></li>
+      <li><div class="pt-2.5 -mb-3.5 flex">
         <a href="/services">Services</a>
         <div class="collapse">
           <input type="checkbox" />
@@ -84,25 +84,23 @@ import Button from "@layouts/Button.astro";
           </div>
           <div class="collapse-content pl-0">
             <ul class="flex flex-col">
-              <a href="/services/children"><li>Children</li></a>
-              <a href="/services/adolescents"><li>Adolescents</li></a>
-              <a href="/services/young-adults"><li>Young Adults</li></a>
-              <a href="/services/animal-assisted"
-                ><li>Animal Assisted Therapy</li></a
-              >
-              <a href="/services/trauma"><li>Trauma Therapy</li></a>
-              <a href="/services/attachment"><li>Attachment</li></a>
-              <a href="/services/self-harm"><li>Self Harm</li></a>
+              <li><a href="/services/children">Children</a></li>
+              <li><a href="/services/adolescents">Adolescents</a></li>
+              <li><a href="/services/young-adults">Young Adults</a></li>
+              <li><a href="/services/animal-assisted"
+                >Animal Assisted Therapy</a></li>
+              <li><a href="/services/trauma">Trauma Therapy</a></li>
+              <li><a href="/services/attachment">Attachment</a></li>
+              <li><a href="/services/self-harm">Self Harm</a></li>
             </ul>
           </div>
         </div>
-      </div>
-      <a href="/philosophy"><li>Philosophy</li></a>
-      <a href="/resources"><li>Resources</li></a>
-      <a href="/faq"><li>FAQ</li></a>
-      <a href="https://www.therapyportal.com/p/rootsofpossibility/"
-        ><li>Client Portal</li></a
-      >
+      </div></li>
+      <li><a href="/philosophy">Philosophy</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="https://www.therapyportal.com/p/rootsofpossibility/"
+        >Client Portal</a></li>
     </ul>
     <div class="mobile-menu-contact">
       <Button color={"primary"} otherClasses={"w-3/4"} link="/contact">
@@ -112,11 +110,11 @@ import Button from "@layouts/Button.astro";
   </div>
   <nav>
     <ul class="nav-list">
-      <a href="/about"><li>About</li></a>
+      <li><a href="/about">About</a></li>
       <div class="dropdown dropdown-hover">
+        <li>
         <div tabindex="0" role="button">
-          <a href="/services">
-            <li class="flex flex-nowrap">
+          <a href="/services" class="flex flex-nowrap">
               Services
               <span>
                 <svg viewBox="0 -2 24 24" fill="none" class="w-8 h-8">
@@ -127,9 +125,9 @@ import Button from "@layouts/Button.astro";
                     fill="#111D13"></path>
                 </svg>
               </span>
-            </li>
-          </a>
-        </div>
+            </a>
+          </div>
+        </li>
         <ul
           tabindex="0"
           class="dropdown-content menu bg-accent rounded-box absolute z-30 w-52 pt-2 px-2 pb-3 shadow"
@@ -175,7 +173,7 @@ import Button from "@layouts/Button.astro";
   nav a.active {
     @apply underline decoration-primary decoration-2 underline-offset-[12px];
   }
-  .mobile-menu {
+  #mobile-menu {
     position: absolute;
     overflow: hidden;
     z-index: 30;
@@ -193,11 +191,11 @@ import Button from "@layouts/Button.astro";
   .mobile-menu-main-list {
     @apply list-none mb-4 px-24;
   }
-  .mobile-menu a {
+  #mobile-menu a {
     @apply text-neutral text-2xl;
   }
 
-  .mobile-menu li {
+  #mobile-menu li {
     @apply py-2.5;
   }
   .mobile-menu-contact {
@@ -251,7 +249,7 @@ import Button from "@layouts/Button.astro";
     const menuBtn = document.querySelector(
       "#hamburger-menu",
     ) as HTMLLabelElement;
-    const menuItems = document.querySelector(".mobile-menu") as HTMLDivElement;
+    const menuItems = document.getElementById("mobile-menu") as HTMLDivElement;
 
     open.addEventListener("change", () => {
       const menuExpanded = open.checked;
