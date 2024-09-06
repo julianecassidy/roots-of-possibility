@@ -38,3 +38,7 @@ Therapy involves challenging yourself to become better, but my aim is always to 
 ## My Style
 
 As your therapist, I promise to never be (or act like) an “authority” who tells you what to do or believes that I know best. No matter their age, I think all people deserve to have their independence and individuality respected. I want to be able to help guide and support you while you navigate the complications of life as a person (because being a human is messy!), while also hopefully motivating you towards change that is meaningful in the ways you need and want. I never offer advice unless you ask for it - because I view it as my job to support and empower you as you discover your own path.
+
+## Therapy for Special Populations
+
+Roots of Possibility also specializes in working with <a href="/philosophy">neurodiverse and LGBTQIA+ individuals</a>. Learn more by exploring our website and resources, or <a href="/contact">contact us</a> directly.
