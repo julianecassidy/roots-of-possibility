@@ -153,10 +153,28 @@ const SCHOOL_REFUSAL: Service = {
   altText: "drawn yellow iris",
 };
 
+const THERAPY_CONSENT: Service = {
+  title: "Therapy Consent and Privacy Laws for Minors in Colorado",
+  description: "",
+  buttonLink: "/resources/MinorConsentandPrivacyinCO.pdf",
+  imagePath: "/flowers/tropic-purple.jpg",
+  altText: "drawn purple tropic",
+};
+
+const TREVOR_PROJECT: Service = {
+  title: "The Trevor Project",
+  description: "",
+  buttonLink: "https://www.thetrevorproject.org/resources/",
+  imagePath: "/flowers/peony-pink.jpg",
+  altText: "drawn pink peony",
+};
+
 export const RESOURCES = [
   CRISIS_RESOURCES,
   SELF_HARM_RESOURCES,
   SUICIDE_HOME_SAFETY,
   EATING_DISORDER_RESOURCES,
   SCHOOL_REFUSAL,
+  THERAPY_CONSENT,
+  TREVOR_PROJECT,
 ]
