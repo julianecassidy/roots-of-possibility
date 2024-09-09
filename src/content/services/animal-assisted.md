@@ -2,10 +2,13 @@
 title: Animal Assisted Therapy
 styledTitle: [{"text": "Animal", "style": "serif"}, {"text": "Assisted", "style": "display"}, {"text": "Therapy", "style": "serif"}, ]
 slug: "animal-assisted"
-description: ""
+description: "Roots of Possibility offers animal assisted therapy in the Denver area for children and teens."
+ogImage: ../../assets/dottie3.jpg
 ---
 
 Meet my furry co-therapist, Dottie Lou! Dottie is a 3 year old bulldog mix rescued from Texas. From day one I knew she had the personality that would suit therapy, having previously worked with another canine partner, my late dog Petey, in Denver middle schools. Dottie Lou is people-centric, loving, and intuitive, and she is especially wonderful with children.
+
+![Dottie3](@assets/dottie3.jpg)
 
 Dottie Lou has been a registered therapy dog through Professional Therapy Dogs of Colorado since July of 2023. Unlike a lot of therapy dogs, who are specially raised and trained by someone else before being adopted by the handler they will work with, Dottie has lived with me since her adoption as a puppy, and all of her specialized training has been done together as a team. This has created an even deeper bond beyond the typical dog and owner or therapy dog and handler that helps enable us to provide the best possible therapeutic interventions to those we work with.
 
@@ -19,6 +22,8 @@ Therapy animals such as Dottie can provide a wealth of benefits to both clinicia
 - Enhance the development of a non-judgmental safe space to better conduct therapy
 
 For children and youth with attachment trauma in particular, animal-assisted interventions with canine co-therapist Dottie Lou may provide extra relief by helping to establish a safe space rooted in unconditional love and acceptance.
+
+![DottieHighFive](@assets/dottie-high-five.jpg)
 
 Check out Dottie’s Instagram at [@dottielou_therapydog](https://www.instagram.com/dottielou_therapydog/)!
 
