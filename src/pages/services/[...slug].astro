@@ -4,6 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@layouts/Header.astro";
 import ServiceMD from "@components/ServiceMD.astro";
+import { slugifyStr } from "@utils/slugify";
 
 export interface Props {
     service: CollectionEntry<"services">;
@@ -20,18 +21,37 @@ export async function getStaticPaths() {
   return [...servicesResults];
 }
 
+const DEFAULT_IMAGE = "../../assets/flowers/peony-red.jpg";
+
 // const { slug } = Astro.params;
 const { service } = Astro.props;
 const { Content } = await service.render();
 
-const pageTitle = service.data.styledTitle;
-const pageDesc = service.data.description;
+const {
+  title,
+  styledTitle,
+  description,
+  ogImage,
+} = service.data;
+
+const ogImageUrl = typeof ogImage === "string" ? ogImage : DEFAULT_IMAGE;
+const ogUrl = new URL(
+  ogImageUrl ?? `/services/${slugifyStr(title)}.jpg`,
+  Astro.url.origin
+).href;
+
+const pageTitle = styledTitle;
+const pageDesc = description;
 
 ---
 
-<Layout title={`Roots of Possibility | ${service.data.title}`}`>
+<Layout
+  title={`Roots of Possibility | ${title}`}`
+  description={description}
+  ogImage={ogUrl}
+>
   <Main>
-      <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+      <Header pageTitleWords={pageTitle} pageDesc="" />
       <div class="mx-4 sm:mx-8 md:mx-16 lg:mx-48 2xl:mx-64 mb-8 relative z-20">
         <ServiceMD>
           <Content />
