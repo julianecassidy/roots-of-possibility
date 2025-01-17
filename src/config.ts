@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://rootsofpossibility.com", // replace this with your deployed domain
   author: "Julia Kuttler, MSW, LCSW",
   desc: "Collaborative, client-centerd therapy for children adolescents, and their families.",
-  title: "Poots of Possibilty | Julia Kuttler",
+  title: "Roots of Possibilty | Julia Kuttler",
   ogImage: "https://rootsofpossibility.com/headshot.png",
   lightAndDarkMode: false,
 };
