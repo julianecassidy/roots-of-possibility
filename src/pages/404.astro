@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import type { TitleStyles } from "types";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@layouts/Header.astro";
+import florals from "@assets/florals/leaves-3.png";
+import Button from "@layouts/Button.astro";
+
+const pageTitle: TitleStyles[] = [
+    { text: "404:", style: "display" },
+    { text: "Page", style: "serif" },
+    { text: "Not", style: "serif" },
+    { text: "Found", style: "serif" },
+];
+const pageDesc = "Looks like you may be a little lost.";
+---
+
+<Layout title="404 - Page Not Found">
+    <Main>
+        <Header pageTitleWords={pageTitle} pageDesc={pageDesc} />
+        <div class="flex justify-center gap-8 p-4 sm:px-8 lg:px-24 2xl:px-56">
+            <Image
+                src={florals}
+                alt="drawing of leaves"
+                class="hidden lg:block opacity-20 w-2/12"
+            />
+            <div class="w-full lg:w-3/4 text-center">
+                <p class="mb-8 text-2xl">Sometimes we all need a little help finding our way. Let's get you back on the right path.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button link="/" color="primary">Return Home</Button>
+                    <Button link="/contact" color="primary">Contact Us</Button>
+                </div>
+            </div>
+        </div>
+    </Main>
+</Layout>
